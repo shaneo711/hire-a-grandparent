@@ -1,6 +1,7 @@
 class GrandparentsController < ApplicationController
 
   def index
+    @grandparents = Grandparent.all
   end
 
   def new
@@ -8,15 +9,18 @@ class GrandparentsController < ApplicationController
   end
 
   def create
-    @grandparent = Grandparent.new(params[:grandparent])
+    @grandparent = Grandparent.new(grandparent_params)
     @grandparent.user = current_user
-    @grandparent.save
-    redirect_to grandparent_path(@grandparent)
+    if @grandparent.save
+      redirect_to grandparents_path
+    else
+      render :new
+    end
   end
 
   private
 
   def grandparent_params
-    params.require(:grandparent).permit(:name, :description, :availability, :location, :user_id)
+    params.require(:grandparent).permit(:name, :description, :location)
   end
 end
