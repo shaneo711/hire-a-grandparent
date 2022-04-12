@@ -9,6 +9,7 @@ class GrandparentsController < ApplicationController
 
   def create
     @grandparent = Grandparent.new(params[:grandparent])
+    @grandparent.user = current_user
     @grandparent.save
     redirect_to grandparent_path(@grandparent)
   end
@@ -16,6 +17,6 @@ class GrandparentsController < ApplicationController
   private
 
   def grandparent_params
-    params.require(:grandparent).permit(:name, description:, availability:, location:)
+    params.require(:grandparent).permit(:name, :description, :availability, :location, :user_id)
   end
 end
