@@ -14,6 +14,14 @@ class GrandparentsController < ApplicationController
     redirect_to grandparent_path(@grandparent)
   end
 
+  def show
+    @grandparent = Grandparent.find(params[:id])
+    @description = params[:description]
+    @interests = params[:interests]
+    @availability = params[:availability]
+    @location = params[:location]
+  end
+
   private
 
   def grandparent_params

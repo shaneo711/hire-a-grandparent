@@ -5,3 +5,12 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+Grandparent.create(id: 1, name: "Martha", description: "Sassy Octogenarian", interests: "Boozing", availability: "Weekends", location: "Melbourne")
+
+
+@grandparent = Grandparent.find(params[:id])
+@description = params[:description]
+@interests = params[:interests]
+@availability = params[:availability]
+@location = params[:location]
