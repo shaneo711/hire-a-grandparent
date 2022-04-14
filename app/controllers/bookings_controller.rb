@@ -33,4 +33,7 @@ class BookingsController < ApplicationController
     @booking = Booking.find(params[:id])
     redirect_to bookings_path
   end 
-end
+
+  def index
+    @bookings = Booking.where(user_id: current_user)
+  end
