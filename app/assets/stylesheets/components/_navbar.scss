@@ -18,7 +18,7 @@
   display: inline;
 }
 
-.nav-item {
+.nav-item .nav-link {
   justify-content: space-between;
   color: #4A4A4A;
   text-decoration: none;
@@ -28,6 +28,7 @@
   font-weight: normal;
   opacity: 0.6;
   transition: opacity 0.3s ease;
+  margin-left: 12px;
 }
 
 .nav-item :hover {
@@ -35,6 +36,6 @@
   color: lightgrey;
 }
 
-.nav-button {
+.avatar {
   margin-left: 12px;
 }
