@@ -3,6 +3,8 @@
   <head>
     <title>HireAGrandparent</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title><%= content_for?(:title) ? yield(:title) : "Hire A Grandparent" %></title>
+    <meta name="description" content="<%= content_for?(:description) ? yield(:description) : "Grandparents are the parents of a person's father or mother – paternal or maternal. Hire someone elses today!" %>">
     <%= javascript_pack_tag "application", "data-turbolinks-track": "reload", defer: true %>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
@@ -15,6 +17,14 @@
   </head>
 
   <body>
+  <header>
+      <%= render 'layouts/navigation' %>
+  </header>
+  <main role="main">
+    <%= content_for?(:content) ? yield(:content) : yield %>
+  </main>
+
+
   <%= render 'shared/flashes' %>
   <%= render 'shared/navbar' %>
     <p class="notice"><%= notice %></p>
