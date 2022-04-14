@@ -1,16 +1,27 @@
-<div class="container">
-  <div class="row-justify-content-center">
-    <div class="col-12">
-    <% @grandparents.each do |grandparent| %>
-      <div class="card" style="width: 18rem;">
-        <img class="card-img-top" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/54/Face_detail%2C_Manzanar_Relocation_Center%2C_Manzanar%2C_California._Grandfather_and_grandson_of_Japanese_ancestry_at_._._._-_NARA_-_537994_%28cropped%29.jpg/275px-Face_detail%2C_Manzanar_Relocation_Center%2C_Manzanar%2C_California._Grandfather_and_grandson_of_Japanese_ancestry_at_._._._-_NARA_-_537994_%28cropped%29.jpg" alt="Card image cap">
-        <div class="card-body">
-          <h5 class="card-title"><%= grandparent.name %></h5>
-          <p class="card-text"><%= grandparent.description %></p>
-          <a href="#" class="btn btn-primary">Hire Me</a>
-        </div>
+
+
+<div class="container mt-4 d-flex">
+  <div class="row w-100">
+    <div class="col-md-12 d-flex flex-column justify-content-between align-items-center">
+      <div class="container-fluid d-flex justify-content-end">
+        <h2 class="btn btn-primary"><%= @grandparents.count %> Grandparents</h2>
       </div>
-    <% end %>
+      <div class="container d-flex flex-wrap justify-content-between align-items-center">
+        <% @grandparents.each do |grandparent| %>
+          <div class="card-trip m-3 d-flex flex-column justify-content-start">
+            <img src= "https://i.guim.co.uk/img/media/3aab8a0699616ac94346c05f667b40844e46322f/0_123_5616_3432/master/5616.jpg?width=620&quality=45&auto=format&fit=max&dpr=2&s=787f2043553cbb582a5b884880cc9b55"/>
+            <div class="card-trip-infos">
+              <div>
+                <h2><%= grandparent.name %></h2>
+                <p><%= grandparent.description %></p>
+              </div>
+            </div>
+            <div class="container d-flex justify-content-between align-items-center mb-3">
+              <h2><i class="fa-solid fa-map-location-dot"></i> - <%= grandparent.location %></h2>
+            </div>
+          </div>
+        <% end %>
+    </div>
     </div>
   </div>
 </div>
