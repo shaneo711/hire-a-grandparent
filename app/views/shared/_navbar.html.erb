@@ -2,7 +2,6 @@
   <div class="container-fluid">
     <%= link_to root_path, class: "navbar-brand" do %>
       <%= image_tag "hireagrandparentlogo.png" %>
-
     <% end %>
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -28,8 +27,17 @@
             </div>
           </li>
         <% else %>
-          <li class="nav-item">
-            <%= link_to "Login", new_user_session_path, class: "nav-link" %>
+
+          <li class="nav-button" type="button">
+            <%= link_to "Become a Grandparent", new_grandparent_path, class: "nav-item" %>
+          </li>
+
+          <li class="nav-button" type="button">
+            <%= link_to "FAQ", "#", class: "nav-item" %>
+          </li>
+
+          <li class="nav-button" type="button">
+            <%= link_to "Log In", new_user_session_path, class: "nav-item" %>
           </li>
         <% end %>
       </ul>
