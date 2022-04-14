@@ -1,7 +1,7 @@
 class BookingsController < ApplicationController
 
   def create
-    @booking = Booking.new(params[:booking])
+    @booking = Booking.new(booking_params)
     @booking.user = current_user
     if @booking.save
       redirect_to bookings_path
@@ -11,21 +11,15 @@ class BookingsController < ApplicationController
   end
 
   def new
-    @booking = booking.find(params[:id])
-    @booking = booking.new 
+    @booking = Booking.new 
   end 
   
   def show
-    @grandparent = Grandparent.find(params[:id])
-    @description = params[:description]
-    @interests = params[:interests]
-    @availability = params[:availability]
-    @location = params[:location]
+    @book = Book.find(params[:id])
   end
 
   def update
     @booking = Booking.find(params[:id])
-    authorize @booking
     @booking.update(booking_params)
     redirect_to bookings_path
   end 
@@ -37,5 +31,6 @@ class BookingsController < ApplicationController
 
   def edit
     @booking = Booking.find(params[:id])
+    redirect_to bookings_path
   end 
 end
