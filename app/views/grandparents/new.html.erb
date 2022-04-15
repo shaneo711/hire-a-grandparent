@@ -1,12 +1,15 @@
 <div class="container">
-  <div class="row-justify-content-center">
-  <h1>Create A New Grandparent</h1>
-    <%= simple_form_for @grandparent do |f| %>
-        <%= f.input :name %>
-        <%= f.input :description %>
-        <%= f.input :location %>
-        <%= f.input :image, label: 'Profile image link' %>
-        <%= f.submit "Create Grandparent", class: "btn btn-primary" %>
-      <% end %>
+  <div class="row justify-content-center">
+    <div class="col-12 col-md-6">
+      <h1 class="mx-auto my-3" style="text-align: center;">New Grandparent Profile</h1>
+        <%= simple_form_for @grandparent do |f| %>
+          <%= f.input :name %>
+          <%= f.input :description, label: 'About Me' %>
+          <%= f.input :interest, label: 'Interests' %>
+          <%= f.input :location %>
+          <%= f.input :image, label: 'Link to Profile Image' %>
+          <%= f.submit "Create Profile", class: "btn btn-primary" %>
+        <% end %>
+    </div>
   </div>
 </div>
