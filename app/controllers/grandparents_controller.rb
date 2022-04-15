@@ -20,15 +20,11 @@ class GrandparentsController < ApplicationController
 
   def show
     @grandparent = Grandparent.find(params[:id])
-    @description = params[:description]
-    @interests = params[:interests]
-    @availability = params[:availability]
-    @location = params[:location]
   end
 
   private
 
   def grandparent_params
-    params.require(:grandparent).permit(:name, :description, :location)
+    params.require(:grandparent).permit(:name, :description, :location, :interest, :image)
   end
 end
