@@ -5,39 +5,8 @@
         <%= f.input :name %>
         <%= f.input :description %>
         <%= f.input :location %>
+        <%= f.input :image, label: 'Profile image link' %>
         <%= f.submit "Create Grandparent", class: "btn btn-primary" %>
       <% end %>
   </div>
 </div>
-
-
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-6">
-        <h1><%= @Grandparent %>'s Profile</h1>
-            <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <img src="https://www.thedailymeal.com/sites/default/files/2020/03/03/00_hed_iStock.jpg" class="d-block w-100" alt="...">
-                </div>
-                <div class="carousel-item">
-                    <img src="https://thumbs.dreamstime.com/b/happy-senior-woman-gardening-smiling-beautiful-spring-day-172595717.jpg" class="d-block w-100" alt="...">
-                </div>
-                <div class="carousel-item">
-                    <img src="https://image.shutterstock.com/image-photo/grandmother-knitting-colorful-laces-balls-260nw-1347653552.jpg" class="d-block w-100" alt="...">
-                </div>
-            </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-            </button>
-        </div>
-    </div>
-</div>
-
-
-
