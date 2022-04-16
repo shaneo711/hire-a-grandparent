@@ -11,7 +11,7 @@
         <p><%= @grandparent.interest %></p>
         <h2>Location</h2>
         <p><%= @grandparent.location %></p>
-        <%= link_to "Book", "#", class: "btn btn-primary" %>
+        <%= link_to "Book", new_grandparent_booking_path(@grandparent), class: "btn btn-primary" %>
       </div>
     </div>
 </div>
