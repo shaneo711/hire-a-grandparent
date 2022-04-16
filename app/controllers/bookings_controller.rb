@@ -14,9 +14,9 @@ class BookingsController < ApplicationController
 
   def new
     @grandparent = Grandparent.find(params[:grandparent_id])
-    @booking = Booking.new 
-  end 
-  
+    @booking = Booking.new
+  end
+
   def show
     @book = Book.find(params[:id])
   end
@@ -25,25 +25,27 @@ class BookingsController < ApplicationController
     @booking = Booking.find(params[:id])
     @booking.update(booking_params)
     redirect_to bookings_path
-  end 
+  end
 
-  def destroy 
+  def destroy
     @booking.destroy
     redirect_to bookings_path
-  end 
+  end
 
   def edit
     @booking = Booking.find(params[:id])
     redirect_to bookings_path
-  end 
+  end
 
   def index
     @bookings = Booking.where(user_id: current_user)
+
+
   end
 
   private
 
   def booking_params
-    params.require(:booking).permit(:date, :comment)
+    params.require(:booking).permit(:date, :title, :description, :comment)
   end
-end 
+end
