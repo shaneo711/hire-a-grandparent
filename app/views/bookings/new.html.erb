@@ -1,0 +1,13 @@
+<div class="full-page-size">
+  <div>
+    <h1 class="title-index"> Please enter your booking request</h1>
+  </div>
+  <div class="booking-form">
+    <%= simple_form_for [@grandparent, @booking] do |f| %>
+    <%= f.input :date %>
+    <div class= "center-button-new">
+    <%= f.button :submit, "Book now", class: "btn btn-primary" %>
+    <% end %>
+    </div>
+  </div>
+</div>
