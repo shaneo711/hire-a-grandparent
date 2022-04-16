@@ -6,6 +6,7 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 require 'faker'
 puts "Wiping database..."
+Booking.destroy_all
 Grandparent.destroy_all
 User.destroy_all
 puts "Database wiped!"
@@ -25,18 +26,84 @@ puts "---------------"
 
 puts "Creating grandparents..."
 
-10.times do
-  grandparent = Grandparent.new(
-    name: Faker::Name.name,
-    location: Faker::Address.city,
-    interest: Faker::Hobby.activity,
-    description: Faker::Quote.famous_last_words,
-    availability: Faker::Date.between(from: 2.days.ago, to: Date.today),
-    image: "https://i.guim.co.uk/img/media/3aab8a0699616ac94346c05f667b40844e46322f/0_123_5616_3432/master/5616.jpg?width=620&quality=45&auto=format&fit=max&dpr=2&s=787f2043553cbb582a5b884880cc9b55",
-    user_id: user.id
-  )
-  grandparent.save!
-  puts "Grandparent #{grandparent.id} created!"
-end
+grandparent = Grandparent.new(
+  name: Faker::Name.name,
+  location: Faker::Address.city,
+  interest: Faker::Hobby.activity,
+  description: Faker::Quote.famous_last_words,
+  availability: Faker::Date.between(from: 2.days.ago, to: Date.today),
+  image: "https://www.smithlifehomecare.com/wp-content/uploads/2020/08/Challenges-of-elderly-smaller.png",
+  user_id: user.id
+)
+grandparent.save!
+puts "Grandparent #{grandparent.id} created!"
+
+grandparent = Grandparent.new(
+  name: Faker::Name.name,
+  location: Faker::Address.city,
+  interest: Faker::Hobby.activity,
+  description: Faker::Quote.famous_last_words,
+  availability: Faker::Date.between(from: 2.days.ago, to: Date.today),
+  image: "https://d18mqtxkrsjgmh.cloudfront.net/public/styles/header_image/public/2019-04/elderly%20pic.jpg?itok=mJMUfNv2",
+  user_id: user.id
+)
+grandparent.save!
+puts "Grandparent #{grandparent.id} created!"
+
+grandparent = Grandparent.new(
+  name: Faker::Name.name,
+  location: Faker::Address.city,
+  interest: Faker::Hobby.activity,
+  description: Faker::Quote.famous_last_words,
+  availability: Faker::Date.between(from: 2.days.ago, to: Date.today),
+  image: "https://homecareassistancemontgomery.com/wp-content/uploads/2018/08/Happy-Senior-Man.jpeg",
+  user_id: user.id
+)
+grandparent.save!
+puts "Grandparent #{grandparent.id} created!"
+grandparent = Grandparent.new(
+  name: Faker::Name.name,
+  location: Faker::Address.city,
+  interest: Faker::Hobby.activity,
+  description: Faker::Quote.famous_last_words,
+  availability: Faker::Date.between(from: 2.days.ago, to: Date.today),
+  image: "https://companionsforseniors.com/wp-content/uploads/2020/12/2020-12-28-Making-Reading-Easier-for-the-Elderly.jpg",
+  user_id: user.id
+)
+grandparent.save!
+puts "Grandparent #{grandparent.id} created!"
+grandparent = Grandparent.new(
+  name: Faker::Name.name,
+  location: Faker::Address.city,
+  interest: Faker::Hobby.activity,
+  description: Faker::Quote.famous_last_words,
+  availability: Faker::Date.between(from: 2.days.ago, to: Date.today),
+  image: "https://www.silvereco.org/en/wp-content/uploads/2017/10/Japan-China-Elderly-people-Ageing-population-2.jpg",
+  user_id: user.id
+)
+grandparent.save!
+puts "Grandparent #{grandparent.id} created!"
+grandparent = Grandparent.new(
+  name: Faker::Name.name,
+  location: Faker::Address.city,
+  interest: Faker::Hobby.activity,
+  description: Faker::Quote.famous_last_words,
+  availability: Faker::Date.between(from: 2.days.ago, to: Date.today),
+  image: "https://agedcaredecisions.com.au/wp-content/uploads/Aged-Care-Decisions-Blogs-Website-2.jpg.webp",
+  user_id: user.id
+)
+grandparent.save!
+puts "Grandparent #{grandparent.id} created!"
+grandparent = Grandparent.new(
+  name: Faker::Name.name,
+  location: Faker::Address.city,
+  interest: Faker::Hobby.activity,
+  description: Faker::Quote.famous_last_words,
+  availability: Faker::Date.between(from: 2.days.ago, to: Date.today),
+  image: "https://www.careworkshealthservices.com/wp-content/uploads/2017/01/170101_article2_addressing-older-adults-etiquette_iStock-154888506-1-768x512.jpg",
+  user_id: user.id
+)
+grandparent.save!
+puts "Grandparent #{grandparent.id} created!"
 puts "---------------"
 puts "Seed complete!"
