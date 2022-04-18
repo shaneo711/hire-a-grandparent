@@ -13,12 +13,13 @@
         <p><%= @grandparent.location.capitalize %></p>
         <%= link_to "Book", new_grandparent_booking_path(@grandparent), class: "btn btn-success mb-3" %>
         <div>
-          <% if current_user == @grandparent.user %>
+          <% if policy(@grandparent).edit? %>
             <%= link_to "Edit Profile", edit_grandparent_path(@grandparent), class: "btn btn-primary" %>
+          <% end %>
+          <% if policy(@grandparent).destroy? %>
             <%= link_to "Delete Profile", grandparent_path(@grandparent), method: :delete, class: "btn btn-danger" %>
           <% end %>
         </div>
-
       </div>
     </div>
 </div>
