@@ -4,6 +4,14 @@ class GrandparentsController < ApplicationController
 
   def index
     @grandparents = policy_scope(Grandparent).order(created_at: :desc)
+    @markers = @grandparents.geocoded.map do |grandparent|
+      {
+        lat: grandparent.latitude,
+        lng: grandparent.longitude,
+        # info_window: render_to_string(partial: "info_window", locals: { grandparent: grandparent })
+        image_url: helpers.asset_url("grandparent_cartoon.png")
+      }
+    end
   end
 
   def new

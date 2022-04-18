@@ -38,6 +38,8 @@ ActiveRecord::Schema.define(version: 2022_04_18_031007) do
     t.datetime "updated_at", precision: 6, null: false
     t.bigint "user_id", null: false
     t.string "image"
+    t.float "latitude"
+    t.float "longitude"
     t.index ["user_id"], name: "index_grandparents_on_user_id"
   end
 
