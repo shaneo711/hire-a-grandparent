@@ -19,6 +19,10 @@ class GrandparentPolicy < ApplicationPolicy
   end
 
   def update?
-    true
+    # If user is owner of grandparent profile => true
+    # Otherwise => false
+    # user => current_user
+    # record => @grandparent
+    user == record.user
   end
 end
