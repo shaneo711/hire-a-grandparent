@@ -4,6 +4,7 @@ Rails.application.routes.draw do
 
   # Route to redirect user to dashboard upon successful sign in.
   get '/user' => "pages#dashboard", :as => :user_root
+  get '/dashboard' => "pages#dashboard"
 
   resources :grandparents do
     resources :bookings, only: %i[new create edit update index]

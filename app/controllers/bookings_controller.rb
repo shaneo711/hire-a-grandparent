@@ -1,28 +1,36 @@
 class BookingsController < ApplicationController
+  before_action :find_booking, only: %i[show edit update destroy]
+
+  def index
+    @bookings = policy_scope(Booking)
+  end
+
+  def new
+    @grandparent = Grandparent.find(params[:grandparent_id])
+    @booking = Booking.new
+    authorize @booking
+  end
 
   def create
     @grandparent = Grandparent.find(params[:grandparent_id])
     @booking = Booking.new(booking_params)
     @booking.user = current_user
     @booking.grandparent = @grandparent
+    authorize @booking
     if @booking.save
-      redirect_to grandparent_bookings_path(@grandparent)
+      redirect_to dashboard_path
     else
       render :new
     end
   end
 
-  def new
-    @grandparent = Grandparent.find(params[:grandparent_id])
-    @booking = Booking.new
+  def show
   end
 
-  def show
-    @book = Book.find(params[:id])
+  def edit
   end
 
   def update
-    @booking = Booking.find(params[:id])
     @booking.update(booking_params)
     redirect_to bookings_path
   end
@@ -32,20 +40,14 @@ class BookingsController < ApplicationController
     redirect_to bookings_path
   end
 
-  def edit
-    @booking = Booking.find(params[:id])
-    redirect_to bookings_path
-  end
-
-  def index
-    @bookings = Booking.where(user_id: current_user)
-
-
-  end
-
   private
 
   def booking_params
     params.require(:booking).permit(:date, :title, :description, :comment)
+  end
+
+  def find_booking
+    @booking = Booking.find(params[:id])
+    authorize @booking
   end
 end
