@@ -23,10 +23,16 @@ class GrandparentPolicy < ApplicationPolicy
     # Otherwise => false
     # user => current_user
     # record => @grandparent
-    user == record.user
+    user_is_owner_or_admin?
   end
 
   def destroy?
-    user == record.user
+    user_is_owner_or_admin?
+  end
+
+  private
+
+  def user_is_owner_or_admin?
+    user == record.user || user.admin
   end
 end
