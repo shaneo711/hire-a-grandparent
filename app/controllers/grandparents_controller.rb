@@ -2,6 +2,12 @@ class GrandparentsController < ApplicationController
 
   def index
     @grandparents = Grandparent.all
+    @markers = @grandparents.geocoded.map do |grandparent|
+      {
+        lat: grandparent.latitude,
+        lng: grandparent.longitude,
+      }
+    end
   end
 
   def new
