@@ -28,7 +28,7 @@ puts "Creating grandparents..."
 
 grandparent = Grandparent.new(
   name: Faker::Name.name,
-  location: Faker::Address.city,
+  location: "Richmond, Melbourne",
   interest: Faker::Hobby.activity,
   description: Faker::Quote.famous_last_words,
   availability: Faker::Date.between(from: 2.days.ago, to: Date.today),
@@ -40,7 +40,7 @@ puts "Grandparent #{grandparent.id} created!"
 
 grandparent = Grandparent.new(
   name: Faker::Name.name,
-  location: Faker::Address.city,
+  location: "Geelong, Victoria",
   interest: Faker::Hobby.activity,
   description: Faker::Quote.famous_last_words,
   availability: Faker::Date.between(from: 2.days.ago, to: Date.today),
@@ -52,7 +52,7 @@ puts "Grandparent #{grandparent.id} created!"
 
 grandparent = Grandparent.new(
   name: Faker::Name.name,
-  location: Faker::Address.city,
+  location: "Frankston, Victoria",
   interest: Faker::Hobby.activity,
   description: Faker::Quote.famous_last_words,
   availability: Faker::Date.between(from: 2.days.ago, to: Date.today),
@@ -63,7 +63,7 @@ grandparent.save!
 puts "Grandparent #{grandparent.id} created!"
 grandparent = Grandparent.new(
   name: Faker::Name.name,
-  location: Faker::Address.city,
+  location: "Docklands, Melbourne",
   interest: Faker::Hobby.activity,
   description: Faker::Quote.famous_last_words,
   availability: Faker::Date.between(from: 2.days.ago, to: Date.today),
@@ -74,7 +74,7 @@ grandparent.save!
 puts "Grandparent #{grandparent.id} created!"
 grandparent = Grandparent.new(
   name: Faker::Name.name,
-  location: Faker::Address.city,
+  location: "Sorrento, Victoria",
   interest: Faker::Hobby.activity,
   description: Faker::Quote.famous_last_words,
   availability: Faker::Date.between(from: 2.days.ago, to: Date.today),
@@ -85,7 +85,7 @@ grandparent.save!
 puts "Grandparent #{grandparent.id} created!"
 grandparent = Grandparent.new(
   name: Faker::Name.name,
-  location: Faker::Address.city,
+  location: "Bulleen, Melbourne",
   interest: Faker::Hobby.activity,
   description: Faker::Quote.famous_last_words,
   availability: Faker::Date.between(from: 2.days.ago, to: Date.today),
@@ -96,7 +96,7 @@ grandparent.save!
 puts "Grandparent #{grandparent.id} created!"
 grandparent = Grandparent.new(
   name: Faker::Name.name,
-  location: Faker::Address.city,
+  location: "Seddon, Melbourne",
   interest: Faker::Hobby.activity,
   description: Faker::Quote.famous_last_words,
   availability: Faker::Date.between(from: 2.days.ago, to: Date.today),
