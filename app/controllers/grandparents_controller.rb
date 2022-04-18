@@ -1,4 +1,6 @@
 class GrandparentsController < ApplicationController
+  # skip_before_action :authenticate_user!, only: :index
+  before_action :find_grandparent, only: %i[show edit update destroy]
 
   def index
     @grandparents = Grandparent.all
@@ -6,6 +8,7 @@ class GrandparentsController < ApplicationController
 
   def new
     @grandparent = Grandparent.new
+    authorize @grandparent
   end
 
   def create
@@ -19,12 +22,28 @@ class GrandparentsController < ApplicationController
   end
 
   def show
-    @grandparent = Grandparent.find(params[:id])
+  end
+
+  def edit
+  end
+
+  def update
+    @grandparent.update(grandparent_params)
+    redirect_to grandparent_path(@grandparent)
+  end
+
+  def destroy
+    @grandparent.destroy
+    redirect_to grandparents_path
   end
 
   private
 
   def grandparent_params
     params.require(:grandparent).permit(:name, :description, :location, :interest, :image)
+  end
+
+  def find_grandparent
+    @grandparent = Grandparent.find(params[:id])
   end
 end
