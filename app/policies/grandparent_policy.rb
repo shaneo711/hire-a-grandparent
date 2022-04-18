@@ -25,4 +25,8 @@ class GrandparentPolicy < ApplicationPolicy
     # record => @grandparent
     user == record.user
   end
+
+  def destroy?
+    user == record.user
+  end
 end
