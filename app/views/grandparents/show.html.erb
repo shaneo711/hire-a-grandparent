@@ -12,6 +12,7 @@
         <h2>Location</h2>
         <p><%= @grandparent.location.capitalize %></p>
         <%= link_to "Book", new_grandparent_booking_path(@grandparent), class: "btn btn-primary" %>
+        <%= link_to "Edit Profile", edit_grandparent_path(@grandparent), class: "btn btn-primary" %>
       </div>
     </div>
 </div>

@@ -4,6 +4,7 @@ class GrandparentsController < ApplicationController
 
   def index
     @grandparents = Grandparent.all
+    authorize @grandparents
   end
 
   def new
@@ -14,8 +15,9 @@ class GrandparentsController < ApplicationController
   def create
     @grandparent = Grandparent.new(grandparent_params)
     @grandparent.user = current_user
-    if @grandparent.save
-      redirect_to grandparents_path
+    authorize @grandparent
+    if @grandparent.save!
+      redirect_to grandparent_path(@grandparent)
     else
       render :new
     end
@@ -45,5 +47,6 @@ class GrandparentsController < ApplicationController
 
   def find_grandparent
     @grandparent = Grandparent.find(params[:id])
+    authorize @grandparent
   end
 end
