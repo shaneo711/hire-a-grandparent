@@ -5,5 +5,7 @@ class PagesController < ApplicationController
   end
 
   def dashboard
+    @grandparents = policy_scope(Grandparent)
+    @bookings = policy_scope(Booking)
   end
 end
