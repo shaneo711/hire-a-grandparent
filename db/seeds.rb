@@ -17,6 +17,7 @@ puts "Creating fake user..."
 user = User.new
 user.email = 'admin@lewagon.com'
 user.password = 'password'
+user.admin = true
 user.save
 puts "---------------"
 puts "User Details: "
