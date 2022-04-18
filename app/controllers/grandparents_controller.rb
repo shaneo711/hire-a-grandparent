@@ -3,7 +3,7 @@ class GrandparentsController < ApplicationController
   before_action :find_grandparent, only: %i[show edit update destroy]
 
   def index
-    @grandparents = policy_scope(Grandparent)
+    @grandparents = policy_scope(Grandparent).order(created_at: :desc)
   end
 
   def new

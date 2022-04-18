@@ -11,7 +11,6 @@ class ApplicationController < ActionController::Base
   end
 
   def after_sign_in_path_for(resource)
-    # stored_location_for(resource) || user_root_path
     if current_user.grandparents.count.zero?
       stored_location_for(resource)
     else
