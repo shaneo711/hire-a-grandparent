@@ -3,8 +3,7 @@ class GrandparentsController < ApplicationController
   before_action :find_grandparent, only: %i[show edit update destroy]
 
   def index
-    @grandparents = Grandparent.all
-    authorize @grandparents
+    @grandparents = policy_scope(Grandparent)
   end
 
   def new
