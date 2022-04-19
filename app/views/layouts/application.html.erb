@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title><%= content_for?(:title) ? yield(:title) : "Hire A Grandparent" %></title>
     <meta name="description" content="<%= content_for?(:description) ? yield(:description) : "Grandparents are the parents of a person's father or mother – paternal or maternal. Hire someone elses today!" %>">
-    <%= javascript_pack_tag "application", "data-turbolinks-track": "reload", defer: true %>
+    <%= javascript_pack_tag "application", "data-turbolinks-track": "reload", defer: true %>,
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
