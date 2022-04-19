@@ -8,7 +8,7 @@ class GrandparentsController < ApplicationController
       {
         lat: grandparent.latitude,
         lng: grandparent.longitude,
-        # info_window: render_to_string(partial: "info_window", locals: { grandparent: grandparent })
+        info_window: render_to_string(partial: "info_window", locals: { grandparent: grandparent }),
         image_url: helpers.asset_url("grandparent_cartoon.png")
       }
     end
