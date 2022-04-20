@@ -1,6 +1,6 @@
  <div class="container d-flex justify-content-center align-items-center">
   <div class="row">
-    <div class="col-sm" style="background-color: #61eb34">
+    <div class="col-sm" style="margin: 32px; background-color: #61eb34">
       <h1>Confirmed</h1>
       <% @bookings.each do |booking| %>
       <div class="card-trip m-3 d-flex flex-column justify-content-start">
@@ -20,7 +20,7 @@
       </div>
       <% end %>
     </div>
-    <div class="col-sm" style="background-color: #eb4634">
+    <div class="col-sm" style="margin: 32px; background-color: #eb4634">
       <h1>Unconfirmed</h1>
       <% @bookings.each do |booking| %>
       <div class="card-trip m-3 d-flex flex-column justify-content-start">
