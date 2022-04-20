@@ -7,7 +7,9 @@ Rails.application.routes.draw do
   get '/dashboard' => "pages#dashboard"
 
   resources :grandparents do
-    resources :bookings, only: %i[new create edit update index]
+    resources :bookings, only: %i[new create edit update index show]
   end
+
+  resources :bookings, only: %i[destroy]
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end
