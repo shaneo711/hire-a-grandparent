@@ -1,12 +1,11 @@
-<div class="container my-3 shadow flex-container">
-  <div class="row d-flex justify-content-around">
-    <div class="col-6 justify-content-start">
-        <img src=<%= @grandparent.image %> style="width: 100%" alt="Profile image">
-        <h1 style="text-align: center;" class="mb-3"><%= @grandparent.name %>'s Profile</h1>
+<div class="container my-3 shadow decor">
+  <div class="row d-flex justify-content-between">
+    <div class="col-6 justify-content-start rounded-5" style="background-image: url(<%= @grandparent.image%>); background-size: auto; background-repeat: no-repeat; background-position: center;">
     </div>
 
 
     <div class="col-6 grandparent_details">
+        <h1 style="text-align: center;" class="w-100" id="name-title"><%= @grandparent.name %>'s Profile</h1>
           <h2>About Me</h2>
           <p><%= @grandparent.description %></p>
           <h2>Interests</h2>
@@ -46,14 +45,14 @@
 
         </div>
         <% unless policy(@grandparent).edit? %>
-          <%= link_to "Book", new_grandparent_booking_path(@grandparent), class: "btn btn-outline-success mb-3" %>
+          <%= link_to "Book", new_grandparent_booking_path(@grandparent), class: "btn btn-outline-success mb-3 button_position" %>
           <% end %>
         <div>
           <% if policy(@grandparent).edit? %>
-            <%= link_to "Edit Profile", edit_grandparent_path(@grandparent), class: "btn btn-outline-primary" %>
+            <%= link_to "Edit Profile", edit_grandparent_path(@grandparent), class: "btn btn-outline-primary button_position" %>
           <% end %>
           <% if policy(@grandparent).destroy? %>
-            <%= link_to "Delete Profile", grandparent_path(@grandparent), method: :delete, class: "btn-outline-danger" %>
+            <%= link_to "Delete Profile", grandparent_path(@grandparent), method: :delete, class: "btn-outline-danger button_position" %>
           <% end %>
         </div>
       </div>
