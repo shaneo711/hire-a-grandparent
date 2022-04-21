@@ -11,7 +11,40 @@
         <p><%= @grandparent.interest %></p>
         <h2>Location</h2>
         <p><%= @grandparent.location.capitalize %></p>
-        <%= link_to "Book", new_grandparent_booking_path(@grandparent), class: "btn btn-success mb-3" %>
+        <h2>Availability</h2>
+        <div class="mb-3 d-flex justify-content-start">
+          <div class="mx-2">
+            <h4 class="m-0">M</h4>
+            <%= @grandparent.monday ? '✅' : '❌' %>
+          </div>
+          <div class="mx-2">
+            <h4 class="m-0">T</h4>
+            <%= @grandparent.tuesday ? '✅' : '❌' %>
+          </div>
+          <div class="mx-2">
+            <h4 class="m-0">W</h4>
+            <%= @grandparent.wednesday ? '✅' : '❌' %>
+          </div>
+          <div class="mx-2">
+            <h4 class="m-0">T</h4>
+            <%= @grandparent.thursday ? '✅' : '❌' %>
+          </div>
+          <div class="mx-2">
+            <h4 class="m-0">F</h4>
+            <%= @grandparent.friday ? '✅' : '❌' %>
+          </div>
+          <div class="mx-2">
+            <h4 class="m-0">S</h4>
+            <%= @grandparent.saturday ? '✅' : '❌' %>
+          </div>
+          <div class="mx-2">
+            <h4 class="m-0">S</h4>
+            <%= @grandparent.sunday ? '✅' : '❌' %>
+          </div>
+        </div>
+        <% unless policy(@grandparent).edit? %>
+          <%= link_to "Book", new_grandparent_booking_path(@grandparent), class: "btn btn-success mb-3" %>
+          <% end %>
         <div>
           <% if policy(@grandparent).edit? %>
             <%= link_to "Edit Profile", edit_grandparent_path(@grandparent), class: "btn btn-primary" %>

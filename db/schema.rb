@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_04_18_060004) do
+ActiveRecord::Schema.define(version: 2022_04_19_101803) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -31,7 +31,7 @@ ActiveRecord::Schema.define(version: 2022_04_18_060004) do
   create_table "grandparents", force: :cascade do |t|
     t.string "name"
     t.text "description"
-    t.datetime "availability"
+    t.date "availability"
     t.string "interest"
     t.string "location"
     t.datetime "created_at", precision: 6, null: false
@@ -40,6 +40,13 @@ ActiveRecord::Schema.define(version: 2022_04_18_060004) do
     t.string "image"
     t.float "latitude"
     t.float "longitude"
+    t.boolean "monday"
+    t.boolean "tuesday"
+    t.boolean "wednesday"
+    t.boolean "thursday"
+    t.boolean "friday"
+    t.boolean "saturday"
+    t.boolean "sunday"
     t.index ["user_id"], name: "index_grandparents_on_user_id"
   end
 
