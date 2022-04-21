@@ -34,9 +34,22 @@
   border-radius: 15px;
 }
 
-.button_position {
-  position: absolute;
-  bottom: 16px;
-  right: 16px;
-  align-items: center;
+.button_1 {
+  display: inline-block;
+  bottom: 0px;
+  float: right;
+}
+
+.button_2 {
+  display: inline-block;
+  justify-content: space-around;
+  bottom: 0px;
+  float: right;
+}
+
+.button_3 {
+  display: inline-block;
+  justify-content: space-around;
+  bottom: 0px;
+  float: right;
 }

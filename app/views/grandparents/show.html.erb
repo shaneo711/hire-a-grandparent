@@ -3,7 +3,6 @@
     <div class="col-6 justify-content-start rounded-5" style="background-image: url(<%= @grandparent.image%>); background-size: auto; background-repeat: no-repeat; background-position: center;">
     </div>
 
-
     <div class="col-6 grandparent_details">
         <h1 style="text-align: center;" class="w-100" id="name-title"><%= @grandparent.name %>'s Profile</h1>
           <h2>About Me</h2>
@@ -45,14 +44,14 @@
 
         </div>
         <% unless policy(@grandparent).edit? %>
-          <%= link_to "Book", new_grandparent_booking_path(@grandparent), class: "btn btn-outline-success mb-3 button_position" %>
+          <%= link_to "Book", new_grandparent_booking_path(@grandparent), class: "btn btn-outline-success mb-3 button_1" %>
           <% end %>
         <div>
           <% if policy(@grandparent).edit? %>
-            <%= link_to "Edit Profile", edit_grandparent_path(@grandparent), class: "btn btn-outline-primary button_position" %>
+            <%= link_to "Edit Profile", edit_grandparent_path(@grandparent), class: "btn btn-outline-primary button_2" %>
           <% end %>
           <% if policy(@grandparent).destroy? %>
-            <%= link_to "Delete Profile", grandparent_path(@grandparent), method: :delete, class: "btn-outline-danger button_position" %>
+            <%= link_to "Delete Profile", grandparent_path(@grandparent), method: :delete, class: "btn-outline-danger button_3" %>
           <% end %>
         </div>
       </div>
