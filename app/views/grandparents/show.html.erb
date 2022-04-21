@@ -1,4 +1,4 @@
-<div class="container my-3">
+<div class="container my-3 shadow">
   <div class="row d-flex justify-content-around">
     <div class="col-6">
         <h1 style="text-align: center;" class="mb-3"><%= @grandparent.name %>'s Profile</h1>
@@ -47,14 +47,14 @@
 
         </div>
         <% unless policy(@grandparent).edit? %>
-          <%= link_to "Book", new_grandparent_booking_path(@grandparent), class: "btn btn-success mb-3" %>
+          <%= link_to "Book", new_grandparent_booking_path(@grandparent), class: "btn btn-outline-success mb-3" %>
           <% end %>
         <div>
           <% if policy(@grandparent).edit? %>
-            <%= link_to "Edit Profile", edit_grandparent_path(@grandparent), class: "btn btn-primary" %>
+            <%= link_to "Edit Profile", edit_grandparent_path(@grandparent), class: "btn btn-outline-primary" %>
           <% end %>
           <% if policy(@grandparent).destroy? %>
-            <%= link_to "Delete Profile", grandparent_path(@grandparent), method: :delete, class: "btn btn-danger" %>
+            <%= link_to "Delete Profile", grandparent_path(@grandparent), method: :delete, class: "btn-outline-danger" %>
           <% end %>
         </div>
       </div>
