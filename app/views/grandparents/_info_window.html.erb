@@ -1,5 +1,5 @@
 <div class="container">
-  <%= image_tag grandparent.image, alt: "Grandparent", class: "h-50 rounded-circle" %>
+  <%= image_tag grandparent.image, alt: "Grandparent", class: "h-50 w-100 rounded-circle" %>
   <h3><%= grandparent.name %></h3>
   <p><%= grandparent.location %></p>
   <%= link_to "View #{grandparent.name}'s Profile", grandparent_path(grandparent), class: "btn btn-primary" %>
