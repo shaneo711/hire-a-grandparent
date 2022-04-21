@@ -1,21 +1,24 @@
 <div class="container my-3">
-    <div class="row d-flex justify-content-around">
-      <div class="col-6">
+  <div class="row d-flex justify-content-around">
+    <div class="col-6">
         <h1 style="text-align: center;" class="mb-3"><%= @grandparent.name %>'s Profile</h1>
         <img src=<%= @grandparent.image %> style="width: 100%" alt="Profile image">
-      </div>
-      <div class="col-6">
-        <h2>About Me</h2>
-        <p><%= @grandparent.description %></p>
-        <h2>Interests</h2>
-        <p><%= @grandparent.interest %></p>
-        <h2>Location</h2>
-        <p><%= @grandparent.location.capitalize %></p>
-        <h2>Availability</h2>
-        <div class="mb-3 d-flex justify-content-start">
-          <div class="mx-2">
-            <h4 class="m-0">M</h4>
-            <%= @grandparent.monday ? '✅' : '❌' %>
+    </div>
+
+
+    <div class="col-6">
+      <div class="text">
+          <h2>About Me</h2>
+          <p><%= @grandparent.description %></p>
+          <h2>Interests</h2>
+          <p><%= @grandparent.interest %></p>
+          <h2>Location</h2>
+          <p><%= @grandparent.location.capitalize %></p>
+          <h2>Availability</h2>
+          <div class="mb-3 d-flex justify-content-start">
+              <div class="mx-2">
+              <h4 class="m-0">M</h4>
+              <%= @grandparent.monday ? '✅' : '❌' %>
           </div>
           <div class="mx-2">
             <h4 class="m-0">T</h4>
@@ -41,6 +44,7 @@
             <h4 class="m-0">S</h4>
             <%= @grandparent.sunday ? '✅' : '❌' %>
           </div>
+
         </div>
         <% unless policy(@grandparent).edit? %>
           <%= link_to "Book", new_grandparent_booking_path(@grandparent), class: "btn btn-success mb-3" %>
@@ -55,4 +59,5 @@
         </div>
       </div>
     </div>
+  </div>
 </div>
