@@ -1,4 +1,11 @@
 Rails.application.routes.draw do
+  get 'reviews/new'
+  get 'reviews/create'
+  get 'reviews/update'
+  get 'reviews/edit'
+  get 'reviews/destroy'
+  get 'reviews/index'
+  get 'reviews/show'
   devise_for :users
   root to: 'pages#home'
 
