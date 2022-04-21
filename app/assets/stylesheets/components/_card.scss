@@ -62,10 +62,16 @@
 
 .card-blog {
   width: 250px;
+  background-color: whitesmoke;
+  border-radius: 6px;
+  display: flex;
+  flex-direction: column;
+  justify-content: between;
 }
 
 .card-blog-img {
-
+  width: 100%;
+  object-fit: cover;
 }
 
 .card-blog-info {

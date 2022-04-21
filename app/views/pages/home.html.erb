@@ -2,10 +2,9 @@
   <div class="banner">
     <div class="container">
       <div class="row p-3">
-        <div class="col-sm-6 d-flex flex-column justify-content-center">
+        <div class="col-sm-6 d-flex flex-column justify-content-center align-items-center">
           <h1>Hire A Grandparent</h1>
           <h4>Creating wholesome and unique experiences with your own new grandparent</h4>
-          <p> <small>🎧 Brought to you by the BiteJockey team 🎧</small></p>
           <%= link_to "Search Grandparents", grandparents_path, class:"btn btn-outline-primary w-50" %>
         </div>
         <div class="col-sm-6">
@@ -13,40 +12,41 @@
         </div>
       </div>
     </div>
-    <div class="container">
-      <h1 style="text-align: center;">Interesting Articles</h1>
+    <div class="container mb-5">
+      <h1 class="text-center w-100">Interesting Articles</h1>
       <div class="cards-wrapper d-flex justify-content-around">
         <div class="card-blog p-3 m-3 shadow">
           <div class="card-blog-img">
-            <%= image_tag "https://picsum.photos/200", class: "rounded-3" %>
+            <%= image_tag "grandparent-blog1.jpeg", class: "rounded-3 mb-3" %>
           </div>
           <div class="card-blog-info">
             <h3>Title</h3>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. At, nesciunt.</p>
-            <%= link_to "Read", '#', class: "btn btn-primary" %>
+            <%= link_to "Read More", '#', class: "btn btn-primary" %>
           </div>
         </div>
         <div class="card-blog p-3 m-3 shadow">
           <div class="card-blog-img">
-            <%= image_tag "https://picsum.photos/200", class: "rounded-3" %>
+            <%= image_tag "grandparent-blog2.jpeg", class: "rounded-3 mb-3" %>
           </div>
           <div class="card-blog-info">
             <h3>Title</h3>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. At, nesciunt.</p>
-            <%= link_to "Read", '#', class: "btn btn-primary" %>
+            <%= link_to "Read More", '#', class: "btn btn-primary" %>
           </div>
         </div>
         <div class="card-blog p-3 m-3 shadow">
           <div class="card-blog-img">
-            <%= image_tag "https://picsum.photos/200", class: "rounded-3" %>
+            <%= image_tag "grandparent-blog3.jpeg", class: "rounded-3 mb-3" %>
           </div>
           <div class="card-blog-info">
             <h3>Title</h3>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. At, nesciunt.</p>
-            <%= link_to "Read", '#', class: "btn btn-primary" %>
+            <%= link_to "Read More", '#', class: "btn btn-primary" %>
           </div>
         </div>
       </div>
     </div>
+    <p> <small>🎧 Brought to you by the BiteJockey team 🎧</small></p>
   </div>
 </div>
