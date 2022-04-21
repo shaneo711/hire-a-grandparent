@@ -49,7 +49,20 @@ class GrandparentsController < ApplicationController
   private
 
   def grandparent_params
-    params.require(:grandparent).permit(:name, :description, :location, :interest, :image)
+    params.require(:grandparent).permit(
+      :name,
+      :description,
+      :location,
+      :interest,
+      :image,
+      :monday,
+      :tuesday,
+      :wednesday,
+      :thursday,
+      :friday,
+      :saturday,
+      :sunday
+    )
   end
 
   def find_grandparent
