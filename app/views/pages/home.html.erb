@@ -1,14 +1,51 @@
-<div class="banner" style="background-image: url('https://i.imgur.com/tBVSsXI.png');">
-  <div class="container">
-    <div class="row">
-      <div class="col-sm-6">
-        <h1>Hire A Grandparent</h1>
-        <h4>Creating wholesome and unique experiences with your own new grandparent</h4>
-        <p> <small>🎧 Brought to you by the BiteJockey team 🎧</small></p>
-        <%= link_to "Search Grandparents", grandparents_path, class:"btn btn-outline-primary" %>
+<div class="container home-page">
+  <div class="banner">
+    <div class="container">
+      <div class="row p-3">
+        <div class="col-sm-6 d-flex flex-column justify-content-center">
+          <h1>Hire A Grandparent</h1>
+          <h4>Creating wholesome and unique experiences with your own new grandparent</h4>
+          <p> <small>🎧 Brought to you by the BiteJockey team 🎧</small></p>
+          <%= link_to "Search Grandparents", grandparents_path, class:"btn btn-outline-primary w-50" %>
+        </div>
+        <div class="col-sm-6">
+          <%= image_tag "CookingGal.png" %>
+        </div>
       </div>
-      <div class="col-sm-6">
-        <%= image_tag "CookingGal.png" %>
+    </div>
+    <div class="container">
+      <h1 style="text-align: center;">Interesting Articles</h1>
+      <div class="cards-wrapper d-flex justify-content-around">
+        <div class="card-blog p-3 m-3 shadow">
+          <div class="card-blog-img">
+            <%= image_tag "https://picsum.photos/200", class: "rounded-3" %>
+          </div>
+          <div class="card-blog-info">
+            <h3>Title</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. At, nesciunt.</p>
+            <%= link_to "Read", '#', class: "btn btn-primary" %>
+          </div>
+        </div>
+        <div class="card-blog p-3 m-3 shadow">
+          <div class="card-blog-img">
+            <%= image_tag "https://picsum.photos/200", class: "rounded-3" %>
+          </div>
+          <div class="card-blog-info">
+            <h3>Title</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. At, nesciunt.</p>
+            <%= link_to "Read", '#', class: "btn btn-primary" %>
+          </div>
+        </div>
+        <div class="card-blog p-3 m-3 shadow">
+          <div class="card-blog-img">
+            <%= image_tag "https://picsum.photos/200", class: "rounded-3" %>
+          </div>
+          <div class="card-blog-info">
+            <h3>Title</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. At, nesciunt.</p>
+            <%= link_to "Read", '#', class: "btn btn-primary" %>
+          </div>
+        </div>
       </div>
     </div>
   </div>
