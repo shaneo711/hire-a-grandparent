@@ -1,13 +1,12 @@
-<div class="container my-3 shadow">
+<div class="container my-3 shadow flex-container">
   <div class="row d-flex justify-content-around">
-    <div class="col-6">
+    <div class="col-6 justify-content-start">
         <img src=<%= @grandparent.image %> style="width: 100%" alt="Profile image">
         <h1 style="text-align: center;" class="mb-3"><%= @grandparent.name %>'s Profile</h1>
     </div>
 
 
-    <div class="col-6">
-      <div class="text">
+    <div class="col-6 grandparent_details">
           <h2>About Me</h2>
           <p><%= @grandparent.description %></p>
           <h2>Interests</h2>
