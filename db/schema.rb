@@ -12,6 +12,7 @@
 
 ActiveRecord::Schema.define(version: 2022_04_21_100936) do
 
+
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -31,7 +32,7 @@ ActiveRecord::Schema.define(version: 2022_04_21_100936) do
   create_table "grandparents", force: :cascade do |t|
     t.string "name"
     t.text "description"
-    t.datetime "availability"
+    t.date "availability"
     t.string "interest"
     t.string "location"
     t.datetime "created_at", precision: 6, null: false
@@ -40,6 +41,13 @@ ActiveRecord::Schema.define(version: 2022_04_21_100936) do
     t.string "image"
     t.float "latitude"
     t.float "longitude"
+    t.boolean "monday"
+    t.boolean "tuesday"
+    t.boolean "wednesday"
+    t.boolean "thursday"
+    t.boolean "friday"
+    t.boolean "saturday"
+    t.boolean "sunday"
     t.index ["user_id"], name: "index_grandparents_on_user_id"
   end
 
@@ -53,6 +61,13 @@ ActiveRecord::Schema.define(version: 2022_04_21_100936) do
     t.datetime "updated_at", precision: 6, null: false
     t.index ["read_at"], name: "index_notifications_on_read_at"
     t.index ["recipient_type", "recipient_id"], name: "index_notifications_on_recipient"
+  end
+
+  create_table "reviews", force: :cascade do |t|
+    t.string "name"
+    t.text "description"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
   end
 
   create_table "users", force: :cascade do |t|
