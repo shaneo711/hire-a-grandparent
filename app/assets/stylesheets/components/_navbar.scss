@@ -33,9 +33,13 @@
 
 .nav-item :hover {
   opacity: 1;
-  color: black !important; // Need this tag to overwrite bootstrap.
+  color: black;
 }
 
 .avatar {
   margin-left: 12px;
+}
+
+.notification-text :hover {
+  color: black !important;
 }
