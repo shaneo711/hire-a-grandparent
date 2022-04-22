@@ -26,8 +26,8 @@ export default class extends Controller {
       customMarker.className = "marker"
       customMarker.style.backgroundImage = `url('${marker.image_url}')`
       customMarker.style.backgroundSize = "contain"
-      customMarker.style.width = "40px"
-      customMarker.style.height = "40px"
+      customMarker.style.width = "60px"
+      customMarker.style.height = "60px"
 
       new mapboxgl.Marker(customMarker)
         .setLngLat([marker.lng, marker.lat])
@@ -44,6 +44,6 @@ export default class extends Controller {
   _fitMapToMarkers() {
     const bounds = new mapboxgl.LngLatBounds()
     this.markersValue.forEach(marker => bounds.extend([marker.lng, marker.lat]))
-    this.map.fitBounds(bounds, { padding: 70, maxZoom: 10, duration: 2000 })
+    this.map.fitBounds(bounds, { padding: 70, maxZoom: 10, duration: 3000 })
   }
 }
