@@ -1,3 +1,19 @@
-<% @notifications.each do |notification| %>
-  <p>You've received a new booking</p>
-<% end %>
+<div class="container" style="border: 2px solid red; height: 70vh;">
+  <h1>Notifications</h1>
+  <div class="card-product">
+    <img src="https://www.verywellfamily.com/thmb/QtdOgFpwz5FJLNDa6ISHWFFUQ6s=/1887x1415/smart/filters:no_upscale()/148194850-56afae933df78cf772c7675b.jpg" style="width: 250px; height: 150px; object-fit: cover;" />
+    <div class="card-product-infos">
+      <h2>New Booking With Gerald: #{Booking Name}</h2>
+      <p>#{Booking Description}</p>
+      <%= link_to "View Booking", user_root_path, class:"btn btn-outline-primary p-100" %>
+    </div>
+  </div>
+  <div class="card-product">
+  <img src="https://www.verywellfamily.com/thmb/QtdOgFpwz5FJLNDa6ISHWFFUQ6s=/1887x1415/smart/filters:no_upscale()/148194850-56afae933df78cf772c7675b.jpg" style="width: 250px; height: 150px; object-fit: cover;" />
+  <div class="card-product-infos">
+    <h2>New Booking With Gerald: #{Booking Name}</h2>
+    <p>#{Booking Description}</p>
+    <%= link_to "View Booking", user_root_path, class:"btn btn-outline-primary p-100" %>
+  </div>
+</div>
+</div>
