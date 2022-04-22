@@ -27,13 +27,13 @@
   border-radius: 50px;
   font-weight: normal;
   opacity: 0.6;
-  transition: opacity 0.3s ease;
+  // transition: opacity 0.3s ease;
   margin-left: 12px;
 }
 
 .nav-item :hover {
   opacity: 1;
-  color: lightgrey;
+  color: black !important; // Need this tag to overwrite bootstrap.
 }
 
 .avatar {

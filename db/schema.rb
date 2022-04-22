@@ -12,7 +12,6 @@
 
 ActiveRecord::Schema.define(version: 2022_04_21_100936) do
 
-
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -81,7 +80,7 @@ ActiveRecord::Schema.define(version: 2022_04_21_100936) do
     t.string "first_name"
     t.string "last_name"
     t.boolean "admin", default: false
-    t.datetime "last_checked_notifications", default: "2022-04-21 10:10:57"
+    t.datetime "last_checked_notifications", default: "2022-04-22 10:28:17"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
