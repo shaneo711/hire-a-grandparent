@@ -16,19 +16,23 @@
               <li class="nav-item dropdown">
                 <%= image_tag "https://i.imgur.com/XwKfN1I.png", class: "avatar dropdown-toggle", id: "navbardropdowngp", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': true %>
                 <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                  <b class="dropdown-item">User: <%= current_user.first_name %></b>
-                  <%= link_to "Add Grandparent", new_grandparent_path, class: "dropdown-item" %>
-                  <%= link_to "My Bookings", "#", class: "dropdown-item" %>
-                  <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
+                  <%= link_to "0 Notifications", notifications_path, class: "dropdown-item" %>
                 </div>
               </li>
-            <% else %>
+            <% elsif current_user.unchecked_notifications.count == 1  %>
+              <li class="nav-item dropdown">
                 <%= image_tag "https://i.imgur.com/zEBX1U4.png", class: "avatar dropdown-toggle", id: "navbardropdowngp", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': true %>
                 <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                  <b class="dropdown-item">User: <%= current_user.first_name %></b>
-                  <%= link_to "Add Grandparent", new_grandparent_path, class: "dropdown-item" %>
-                  <%= link_to "My Bookings", "#", class: "dropdown-item" %>
-                  <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
+                  <%= link_to "#{current_user.unchecked_notifications.count} Notification", notifications_path, class: "dropdown-item" %>
+                </div>
+              </li>
+            <% else current_user.unchecked_notifications.count > 1  %>
+              <li class="nav-item dropdown">
+                <%= image_tag "https://i.imgur.com/zEBX1U4.png", class: "avatar dropdown-toggle", id: "navbardropdowngp", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': true %>
+                <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                  <%= link_to "#{current_user.unchecked_notifications.count} Notifications", notifications_path, class: "dropdown-item" %>
+                </div>
+              </li>
             <% end %>
           </li>
           <li class="nav-item active">
