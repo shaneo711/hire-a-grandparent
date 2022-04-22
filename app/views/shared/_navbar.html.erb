@@ -13,13 +13,23 @@
         <% if user_signed_in? %>
           <li class="nav-item dropdown">
             <% if current_user.unchecked_notifications.count == 0 %>
-              <%= link_to "Notifications" , notifications_path, class: "nav-link" %>
+              <li class="nav-item dropdown">
+                <%= image_tag "https://i.imgur.com/XwKfN1I.png", class: "avatar dropdown-toggle", id: "navbardropdowngp", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': true %>
+                <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                  <b class="dropdown-item">User: <%= current_user.first_name %></b>
+                  <%= link_to "Add Grandparent", new_grandparent_path, class: "dropdown-item" %>
+                  <%= link_to "My Bookings", "#", class: "dropdown-item" %>
+                  <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
+                </div>
+              </li>
             <% else %>
-              <%= link_to "Notifications" , notifications_path, class: "nav-link active" %>
+                <%= image_tag "https://i.imgur.com/zEBX1U4.png", class: "avatar dropdown-toggle", id: "navbardropdowngp", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': true %>
+                <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                  <b class="dropdown-item">User: <%= current_user.first_name %></b>
+                  <%= link_to "Add Grandparent", new_grandparent_path, class: "dropdown-item" %>
+                  <%= link_to "My Bookings", "#", class: "dropdown-item" %>
+                  <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
             <% end %>
-            <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-              <b class="dropdown-item">User: <%= current_user.first_name %></b>
-            </div>
           </li>
           <li class="nav-item active">
             <%= link_to "Grandparents", grandparents_path, class: "nav-link" %>
