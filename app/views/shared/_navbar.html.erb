@@ -10,8 +10,32 @@
     </button>
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav me-auto d-flex align-items-center">
+      <ul class="nav nav-pills me-auto d-flex align-items-center">
         <% if user_signed_in? %>
+          <li class="nav-item dropdown">
+            <% if current_user.unchecked_notifications.count == 0 %>
+              <li class="nav-item dropdown">
+                <%= image_tag "https://i.imgur.com/XwKfN1I.png", class: "avatar dropdown-toggle", id: "navbardropdowngp", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': true %>
+                <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                  <%= link_to "0 Notifications", notifications_path, class: "dropdown-item" %>
+                </div>
+              </li>
+            <% elsif current_user.unchecked_notifications.count == 1  %>
+              <li class="nav-item dropdown">
+                <%= image_tag "https://i.imgur.com/zEBX1U4.png", class: "avatar dropdown-toggle", id: "navbardropdowngp", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': true %>
+                <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                  <%= link_to "#{current_user.unchecked_notifications.count} Notification", notifications_path, class: "dropdown-item" %>
+                </div>
+              </li>
+            <% else current_user.unchecked_notifications.count > 1  %>
+              <li class="nav-item dropdown">
+                <%= image_tag "https://i.imgur.com/zEBX1U4.png", class: "avatar dropdown-toggle", id: "navbardropdowngp", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': true %>
+                <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                  <%= link_to "#{current_user.unchecked_notifications.count} Notifications", notifications_path, class: "dropdown-item" %>
+                </div>
+              </li>
+            <% end %>
+          </li>
           <li class="nav-item active">
             <%= link_to "Grandparents", grandparents_path, class: "btn btn-primary mx-1 rounded-pill" %>
           </li>
