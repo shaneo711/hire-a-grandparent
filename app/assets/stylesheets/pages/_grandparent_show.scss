@@ -1,0 +1,55 @@
+
+.decor {
+  position: inherit;
+  border-radius: 15px;
+  max-width: 100px;
+  background-color: #ffcfd8;
+}
+
+.grandparent_details {
+  padding-top: 10px;
+  text-align: left;
+  position: relative;
+}
+
+
+#name-title {
+  font-weight: 700;
+  color: #4971ef;
+  text-shadow: 2px 2px white;
+  bottom: 16px;
+  right: 16px;
+
+}
+
+#profile-image {
+  border-radius: 15px;
+  height: 100%;
+  width: 50%;
+  top: 40px;
+  bottom: 40px;
+  right: 20px;;
+}
+
+.rounded-large {
+  border-radius: 15px;
+}
+
+.button_1 {
+  display: inline-block;
+  bottom: 0px;
+  float: right;
+}
+
+.button_2 {
+  display: inline-block;
+  justify-content: space-around;
+  bottom: 0px;
+  float: right;
+}
+
+.button_3 {
+  display: inline-block;
+  justify-content: space-around;
+  bottom: 0px;
+  float: right;
