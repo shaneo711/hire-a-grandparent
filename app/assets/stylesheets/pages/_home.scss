@@ -1,5 +1,6 @@
 // Specific CSS for your home-page
 .home-page {
+
   body {
     font-family: "Work Sans", "Helvetica", "sans-serif";
     // background-image: url("https://images.immediate.co.uk/production/volatile/sites/4/2021/08/mountains-7ddde89.jpg?quality=90&resize=768,574");
@@ -26,5 +27,17 @@
   h4 {
     padding: 8px 0 16px 0;
     font-family: "Nunito", "Helvetica", "sans-serif";
+  }
+  .btn-cta {
+    color: white;
+    background-color: #4971ef;
+    font-weight: bold;
+    display: block;
+    width: 200%;
+    padding: 14px 28px;
+    font-size: 16px;
+  }
+  .btn-cta:hover {
+    background-color:blue ;
   }
 }

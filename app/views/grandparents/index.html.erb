@@ -12,16 +12,16 @@
       <div class="container-fluid d-flex justify-content-center flex-wrap w-100">
         <% @grandparents.each do |grandparent| %>
           <div class="card-trip m-3 d-flex flex-column justify-content-start rounded">
-            <img src=<%= grandparent.image %> />
+            <img src=<%= grandparent.image %>  class="rounded"/>
             <div class="card-trip-infos">
               <div>
-                <h2><%= grandparent.name %></h2>
-                <p style="font-size: 16px;">Quote: <%= grandparent.description %></p>
+                <h2 class="mb-2"><%= grandparent.name %></h2>
+                <p style="font-size: 16px;" class="mb-2">"<%= grandparent.description %>"</p>
                 <p style="font-size: 16px;">Interests: <%= grandparent.interest %></p>
               </div>
             </div>
             <div class="container d-flex justify-content-between align-items-center mb-3">
-              <h2><i class="fa-solid fa-map-location-dot"></i> - <%= grandparent.location %></h2>
+              <p style="font-size: 16px; color: black;"><i class="fa-solid fa-map-location-dot"></i> - <%= grandparent.location %></p>
               <%= link_to "Details", grandparent_path(grandparent), class: "btn btn-primary" %>
             </div>
           </div>

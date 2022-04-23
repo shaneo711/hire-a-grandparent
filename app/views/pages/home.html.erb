@@ -1,11 +1,11 @@
-<div class="container home-page">
+<div class="container-fluid home-page">
   <div class="banner">
     <div class="container">
       <div class="row p-3">
         <div class="col-sm-6 d-flex flex-column justify-content-center align-items-center">
           <h1 style="font-size: 72px;">Hire A Grandparent</h1>
           <h4>Creating wholesome and unique experiences with your own new grandparent</h4>
-          <%= link_to "Search Grandparents", grandparents_path, class:"btn btn-outline-primary w-50" %>
+          <%= link_to "Search Grandparents", grandparents_path, class:"btn btn-cta btn-outline-primary w-50" %>
         </div>
         <div class="col-sm-6">
           <%= image_tag "CookingGal.png" %>
@@ -15,8 +15,8 @@
     <div class="container mb-5">
       <h1 class="text-center w-100">Interesting Articles</h1>
       <div class="cards-wrapper d-flex justify-content-around">
-        <div class="card-blog p-3 m-3 shadow">
-          <div class="card-blog-img">
+        <div class="card-blog p-3 m-3 shadow d-flex flex-column justify-content-between">
+          <div class="card-blog-img mb-2">
             <%= image_tag "grandparent-blog1.jpg", class: "rounded-3 mb-3" %>
           </div>
           <div class="card-blog-info">
@@ -25,8 +25,8 @@
             <%= link_to "Read More", '#', class: "btn btn-primary" %>
           </div>
         </div>
-        <div class="card-blog p-3 m-3 shadow">
-          <div class="card-blog-img">
+        <div class="card-blog p-3 m-3 shadow d-flex flex-column justify-content-between">
+          <div class="card-blog-img mb-2">
             <%= image_tag "grandparent-blog2.jpg", class: "rounded-3 mb-3" %>
           </div>
           <div class="card-blog-info">
@@ -35,11 +35,11 @@
             <%= link_to "Read More", '#', class: "btn btn-primary" %>
           </div>
         </div>
-        <div class="card-blog p-3 m-3 shadow">
-          <div class="card-blog-img">
+        <div class="card-blog p-3 m-3 shadow d-flex flex-column justify-content-between">
+          <div class="card-blog-img mb-2 h-50">
             <%= image_tag "grandparent-blog3.jpg", class: "rounded-3 mb-3" %>
           </div>
-          <div class="card-blog-info">
+          <div class="card-blog-info h-50">
             <h3>When are you 'Old'?</h3>
             <p>Once people are past middle age, they're old. That's how life progresses: You're young, you're middle-aged, then you're old.</p>
             <%= link_to "Read More", '#', class: "btn btn-primary" %>
