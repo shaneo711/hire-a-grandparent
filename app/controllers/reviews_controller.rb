@@ -1,11 +1,11 @@
 class ReviewsController < ApplicationController
   def new
-    @booking = Booking.find(params_id])
+    @booking = Booking.find(params[:id])
     @review = Review.new
   end
 
   def create
-    @booking = Booking.find(params[:id]) 
+    @booking = Booking.find(params[:id])
     @review = Review.new(review_params)
     @review.booking = @booking
     if @review.save
@@ -18,9 +18,9 @@ class ReviewsController < ApplicationController
   def index
     @reviews = Review.all
   end
-  
+
   private
-  
+
   def review_params
     params.require(:review).permit(:rating, :booking_id)
   end
