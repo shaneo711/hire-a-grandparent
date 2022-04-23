@@ -12,10 +12,12 @@
         <div class="card-product-infos pt-22">
             <h2>New Booking: "<%= booking.title %>" with <%= grandparent.name %></h2>
             <p><%= booking.description %></p>
-            <p><%= booking.date %></p>
+            <p><%= booking.date.to_s[0..-8] %></p>
             <%= link_to "View Booking", user_root_path, class:"btn btn-outline-primary p-100 d-flex justify-content flex-end" %>
         </div>
       </div>
     <% end %>
   <% end %>
 </div>
+
+          <p><strong>Booking Date: </strong><%= booking.date.to_s[0..-8]%></p> <br>
