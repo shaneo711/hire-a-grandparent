@@ -1,4 +1,4 @@
-<div class="container-fluid home-page">
+<div class="container-fluid home-page" style="padding: 0;">
   <div class="banner">
     <div class="container">
       <div class="row p-3">
@@ -12,7 +12,8 @@
         </div>
       </div>
     </div>
-    <div class="container mb-5">
+    <br>
+    <div class="container mb-4 pb-5 shadow" style="background-color: white; border-radius: 12px;">
       <h1 class="text-center w-100">Interesting Articles</h1>
       <div class="cards-wrapper d-flex justify-content-around">
         <div class="card-blog p-3 m-3 shadow d-flex flex-column justify-content-between">
@@ -20,8 +21,8 @@
             <%= image_tag "grandparent-blog1.jpg", class: "rounded-3 mb-3" %>
           </div>
           <div class="card-blog-info">
-            <h3>Ageing and health</h3>
-            <p>People worldwide are living longer. Today most people can expect to live into their sixties and beyond.</p>
+            <h3>Ageing and Health</h3>
+            <p>Practical and easy tips to help keep you feeling fresh and healthy.</p>
             <%= link_to "Read More", '#', class: "btn btn-primary" %>
           </div>
         </div>
@@ -30,18 +31,18 @@
             <%= image_tag "grandparent-blog2.jpg", class: "rounded-3 mb-3" %>
           </div>
           <div class="card-blog-info">
-            <h3>The bucket, and you.</h3>
-            <p>How to take control over the common water receptacle and live your life without fear.</p>
+            <h3>Healthy Body & Mind</h3>
+            <p>Take control of your mental and physical health to be fitter than your friends.</p>
             <%= link_to "Read More", '#', class: "btn btn-primary" %>
           </div>
         </div>
         <div class="card-blog p-3 m-3 shadow d-flex flex-column justify-content-between">
-          <div class="card-blog-img mb-2 h-50">
+          <div class="card-blog-img mb-2">
             <%= image_tag "grandparent-blog3.jpg", class: "rounded-3 mb-3" %>
           </div>
-          <div class="card-blog-info h-50">
-            <h3>When are you 'Old'?</h3>
-            <p>Once people are past middle age, they're old. That's how life progresses: You're young, you're middle-aged, then you're old.</p>
+          <div class="card-blog-info">
+            <h3>When are you "Old"</h3>
+            <p>That dreaded laberl. What does it mean, when does it apply, if ever at all?</p>
             <%= link_to "Read More", '#', class: "btn btn-primary" %>
           </div>
         </div>
