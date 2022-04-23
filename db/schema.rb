@@ -31,7 +31,7 @@ ActiveRecord::Schema.define(version: 2022_04_21_100936) do
   create_table "grandparents", force: :cascade do |t|
     t.string "name"
     t.text "description"
-    t.datetime "availability"
+    t.date "availability"
     t.string "interest"
     t.string "location"
     t.datetime "created_at", precision: 6, null: false
@@ -40,6 +40,13 @@ ActiveRecord::Schema.define(version: 2022_04_21_100936) do
     t.string "image"
     t.float "latitude"
     t.float "longitude"
+    t.boolean "monday"
+    t.boolean "tuesday"
+    t.boolean "wednesday"
+    t.boolean "thursday"
+    t.boolean "friday"
+    t.boolean "saturday"
+    t.boolean "sunday"
     t.index ["user_id"], name: "index_grandparents_on_user_id"
   end
 
@@ -55,6 +62,13 @@ ActiveRecord::Schema.define(version: 2022_04_21_100936) do
     t.index ["recipient_type", "recipient_id"], name: "index_notifications_on_recipient"
   end
 
+  create_table "reviews", force: :cascade do |t|
+    t.string "name"
+    t.text "description"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
@@ -66,7 +80,7 @@ ActiveRecord::Schema.define(version: 2022_04_21_100936) do
     t.string "first_name"
     t.string "last_name"
     t.boolean "admin", default: false
-    t.datetime "last_checked_notifications", default: "2022-04-21 10:10:57"
+    t.datetime "last_checked_notifications", default: "2022-04-22 10:28:17"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end

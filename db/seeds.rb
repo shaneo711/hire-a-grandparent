@@ -34,7 +34,14 @@ grandparent = Grandparent.new(
   description: Faker::Quote.famous_last_words,
   availability: Faker::Date.between(from: 2.days.ago, to: Date.today),
   image: "https://www.smithlifehomecare.com/wp-content/uploads/2020/08/Challenges-of-elderly-smaller.png",
-  user_id: user.id
+  user_id: user.id,
+  monday: true,
+  tuesday: true,
+  wednesday: false,
+  thursday: false,
+  friday: true,
+  saturday: false,
+  sunday: true
 )
 grandparent.save!
 puts "Grandparent #{grandparent.id} created!"
@@ -46,7 +53,14 @@ grandparent = Grandparent.new(
   description: Faker::Quote.famous_last_words,
   availability: Faker::Date.between(from: 2.days.ago, to: Date.today),
   image: "https://d18mqtxkrsjgmh.cloudfront.net/public/styles/header_image/public/2019-04/elderly%20pic.jpg?itok=mJMUfNv2",
-  user_id: user.id
+  user_id: user.id,
+  monday: true,
+  tuesday: false,
+  wednesday: true,
+  thursday: false,
+  friday: true,
+  saturday: false,
+  sunday: true
 )
 grandparent.save!
 puts "Grandparent #{grandparent.id} created!"
@@ -58,10 +72,18 @@ grandparent = Grandparent.new(
   description: Faker::Quote.famous_last_words,
   availability: Faker::Date.between(from: 2.days.ago, to: Date.today),
   image: "https://homecareassistancemontgomery.com/wp-content/uploads/2018/08/Happy-Senior-Man.jpeg",
-  user_id: user.id
+  user_id: user.id,
+  monday: true,
+  tuesday: true,
+  wednesday: false,
+  thursday: false,
+  friday: false,
+  saturday: false,
+  sunday: false
 )
 grandparent.save!
 puts "Grandparent #{grandparent.id} created!"
+
 grandparent = Grandparent.new(
   name: Faker::Name.name,
   location: "Docklands, Melbourne",
@@ -69,10 +91,18 @@ grandparent = Grandparent.new(
   description: Faker::Quote.famous_last_words,
   availability: Faker::Date.between(from: 2.days.ago, to: Date.today),
   image: "https://companionsforseniors.com/wp-content/uploads/2020/12/2020-12-28-Making-Reading-Easier-for-the-Elderly.jpg",
-  user_id: user.id
+  user_id: user.id,
+  monday: true,
+  tuesday: true,
+  wednesday: true,
+  thursday: true,
+  friday: true,
+  saturday: true,
+  sunday: true
 )
 grandparent.save!
 puts "Grandparent #{grandparent.id} created!"
+
 grandparent = Grandparent.new(
   name: Faker::Name.name,
   location: "Sorrento, Victoria",
@@ -80,10 +110,18 @@ grandparent = Grandparent.new(
   description: Faker::Quote.famous_last_words,
   availability: Faker::Date.between(from: 2.days.ago, to: Date.today),
   image: "https://www.silvereco.org/en/wp-content/uploads/2017/10/Japan-China-Elderly-people-Ageing-population-2.jpg",
-  user_id: user.id
+  user_id: user.id,
+  monday: true,
+  tuesday: true,
+  wednesday: false,
+  thursday: false,
+  friday: true,
+  saturday: false,
+  sunday: true
 )
 grandparent.save!
 puts "Grandparent #{grandparent.id} created!"
+
 grandparent = Grandparent.new(
   name: Faker::Name.name,
   location: "Bulleen, Melbourne",
@@ -91,10 +129,18 @@ grandparent = Grandparent.new(
   description: Faker::Quote.famous_last_words,
   availability: Faker::Date.between(from: 2.days.ago, to: Date.today),
   image: "https://agedcaredecisions.com.au/wp-content/uploads/Aged-Care-Decisions-Blogs-Website-2.jpg.webp",
-  user_id: user.id
+  user_id: user.id,
+  monday: true,
+  tuesday: true,
+  wednesday: false,
+  thursday: false,
+  friday: true,
+  saturday: false,
+  sunday: true
 )
 grandparent.save!
 puts "Grandparent #{grandparent.id} created!"
+
 grandparent = Grandparent.new(
   name: Faker::Name.name,
   location: "Seddon, Melbourne",
@@ -102,7 +148,14 @@ grandparent = Grandparent.new(
   description: Faker::Quote.famous_last_words,
   availability: Faker::Date.between(from: 2.days.ago, to: Date.today),
   image: "https://www.careworkshealthservices.com/wp-content/uploads/2017/01/170101_article2_addressing-older-adults-etiquette_iStock-154888506-1-768x512.jpg",
-  user_id: user.id
+  user_id: user.id,
+  monday: true,
+  tuesday: true,
+  wednesday: false,
+  thursday: false,
+  friday: true,
+  saturday: false,
+  sunday: true
 )
 grandparent.save!
 puts "Grandparent #{grandparent.id} created!"

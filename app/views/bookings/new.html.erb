@@ -1,8 +1,39 @@
 <div class="container">
   <div class="row justify-content-center">
-    <div class="col-12 col-md-6">
+    <div class="col-12 col-md-6 shadow p-5 mb-5 bg-body rounded mt-3">
       <h1 class="mx-auto my-3" style="text-align: center;">New Booking with <%= @grandparent.name %></h1>
-      <img src="<%= @grandparent.image %>" alt="" class="my-3">
+      <img src="<%= @grandparent.image %>" alt="" class="my-3 w-100">
+        <h2 style="text-align: center;">Availability</h2>
+        <div class="mb-3 d-flex justify-content-center">
+          <div class="mx-2">
+            <h4 class="m-0" style="text-align: center;">M</h4>
+            <%= @grandparent.monday ? '✅' : '❌' %>
+          </div>
+          <div class="mx-2" style="text-align: center;">
+            <h4 class="m-0">T</h4>
+            <%= @grandparent.tuesday ? '✅' : '❌' %>
+          </div>
+          <div class="mx-2" style="text-align: center;">
+            <h4 class="m-0">W</h4>
+            <%= @grandparent.wednesday ? '✅' : '❌' %>
+          </div>
+          <div class="mx-2" style="text-align: center;">
+            <h4 class="m-0">T</h4>
+            <%= @grandparent.thursday ? '✅' : '❌' %>
+          </div>
+          <div class="mx-2" style="text-align: center;">
+            <h4 class="m-0">F</h4>
+            <%= @grandparent.friday ? '✅' : '❌' %>
+          </div>
+          <div class="mx-2" style="text-align: center;">
+            <h4 class="m-0">S</h4>
+            <%= @grandparent.saturday ? '✅' : '❌' %>
+          </div>
+          <div class="mx-2">
+            <h4 class="m-0" style="text-align: center;">S</h4>
+            <%= @grandparent.sunday ? '✅' : '❌' %>
+          </div>
+        </div>
       <%= simple_form_for [@grandparent, @booking] do |f| %>
         <%= f.input :date %>
         <%= f.input :title, label: "Booking Title" %>
