@@ -5,14 +5,14 @@
     <%= link_to "Search Grandparents", grandparents_path, class:"btn btn-outline-primary p-100" %>
   <% else current_user.unchecked_notifications.count > 0  %>
     <% @notifications.each do |notification| %>
-      <div class="card-product" style="border-radius: 15px;">
+      <div class="card-product" style="border-radius: 15px; height: 170px;">
       <% grandparent = notification.params[:booking].grandparent %>
       <% booking = notification.params[:booking] %>
-        <img src=<%= notification.params[:booking].grandparent.image %> style="object-fit: cover;">
+        <img src=<%= notification.params[:booking].grandparent.image %> style="object-fit: cover; width: 250px;">
         <div class="card-product-infos pt-22">
             <h2>New Booking: "<%= booking.title %>" with <%= grandparent.name %></h2>
             <p><%= booking.description %></p>
-            <p><%= booking.date.to_s[0..-8] %></p>
+            <p><b>Booking Date:</b> <%= booking.date.to_s[0..-8] %></p>
             <%= link_to "View Booking", user_root_path, class:"btn btn-outline-primary p-100 d-flex justify-content flex-end" %>
         </div>
       </div>
