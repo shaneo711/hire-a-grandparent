@@ -11,11 +11,13 @@
           <p><%= @grandparent.interest %></p>
           <h2>Location</h2>
           <p><%= @grandparent.location.capitalize %></p>
-          <h2>Availability</h2>
-          <div class="mb-3 d-flex justify-content-start">
-              <div class="mx-2">
-              <h4 class="m-0">M</h4>
-              <%= @grandparent.monday ? '✅' : '❌' %>
+
+        <div class="availability-placement border border-primary d-flex justify-content-end">
+            <h2 style="title-head mb-3 d-flex justify-content-end">Availability</h2>
+            <div class="mb-3 d-flex justify-content-top">
+          <div class="mx-2">
+            <h4 class="m-0">M</h4>
+            <%= @grandparent.monday ? '✅' : '❌' %>
           </div>
           <div class="mx-2">
             <h4 class="m-0">T</h4>
@@ -41,6 +43,7 @@
             <h4 class="m-0">S</h4>
             <%= @grandparent.sunday ? '✅' : '❌' %>
           </div>
+        </div>
 
         </div>
         <% unless policy(@grandparent).edit? %>
