@@ -81,6 +81,7 @@ ActiveRecord::Schema.define(version: 2022_04_21_100936) do
     t.string "last_name"
     t.boolean "admin", default: false
     t.datetime "last_checked_notifications", default: "2022-04-23 00:28:02"
+
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
