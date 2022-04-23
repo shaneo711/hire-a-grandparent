@@ -4,55 +4,64 @@
     </div>
 
     <div class="col-6 grandparent_details">
-        <h1 style="text-align: center;" class="w-100" id="name-title"><%= @grandparent.name %>'s Profile</h1>
-          <h2>About Me</h2>
-          <p><%= @grandparent.description %></p>
-          <h2>Interests</h2>
-          <p><%= @grandparent.interest %></p>
-          <h2>Location</h2>
-          <p><%= @grandparent.location.capitalize %></p>
-          <h2>Availability</h2>
-          <div class="mb-3 d-flex justify-content-start">
-              <div class="mx-2">
-              <h4 class="m-0">M</h4>
-              <%= @grandparent.monday ? '✅' : '❌' %>
+        <h1 style="text-align: center;" class="w-100 mb-3" id="name-title"><%= @grandparent.name %>'s Profile</h1>
+        <div class="grandparent-show-page d-flex justify-space-between">
+          <div class="ps-3 grandparent-info w-50">
+            <h2>About Me</h2>
+            <p><%= @grandparent.description %></p>
+            <h2>Interests</h2>
+            <p><%= @grandparent.interest %></p>
+            <h2>Location</h2>
+            <p><%= @grandparent.location.capitalize %></p>
           </div>
-          <div class="mx-2">
-            <h4 class="m-0">T</h4>
-            <%= @grandparent.tuesday ? '✅' : '❌' %>
+          <div class="right-side">
+            <div class="grandparent-availability w-50">
+              <h2 class="ps-5 mb-3">Availability</h2>
+              <div class="availability-checks mb-3 d-flex justify-content-start">
+                <div class="mx-2">
+                  <h4 class="m-0">M</h4>
+                  <%= @grandparent.monday ? '✅' : '❌' %>
+                </div>
+                <div class="mx-2">
+                  <h4 class="m-0">T</h4>
+                  <%= @grandparent.tuesday ? '✅' : '❌' %>
+                </div>
+                <div class="mx-2">
+                  <h4 class="m-0">W</h4>
+                  <%= @grandparent.wednesday ? '✅' : '❌' %>
+                </div>
+                <div class="mx-2">
+                  <h4 class="m-0">T</h4>
+                  <%= @grandparent.thursday ? '✅' : '❌' %>
+                </div>
+                <div class="mx-2">
+                  <h4 class="m-0">F</h4>
+                  <%= @grandparent.friday ? '✅' : '❌' %>
+                </div>
+                <div class="mx-2">
+                  <h4 class="m-0">S</h4>
+                  <%= @grandparent.saturday ? '✅' : '❌' %>
+                </div>
+                <div class="mx-2">
+                  <h4 class="m-0">S</h4>
+                  <%= @grandparent.sunday ? '✅' : '❌' %>
+                </div>
+              </div>
+            </div>
+            <div class="grandparent-buttons d-flex justify-content-center">
+              <% unless policy(@grandparent).edit? %>
+                <%= link_to "Book", new_grandparent_booking_path(@grandparent), class: "btn btn-outline-success mb-3 button_1" %>
+              <% end %>
+              <div>
+                <% if policy(@grandparent).destroy? %>
+                  <%= link_to "Delete Profile", grandparent_path(@grandparent), method: :delete, class: "btn btn-outline-danger" %>
+                <% end %>
+                <% if policy(@grandparent).edit? %>
+                  <%= link_to "Edit Profile", edit_grandparent_path(@grandparent), class: "btn btn-outline-success" %>
+                <% end %>
+              </div>
+            </div>
           </div>
-          <div class="mx-2">
-            <h4 class="m-0">W</h4>
-            <%= @grandparent.wednesday ? '✅' : '❌' %>
-          </div>
-          <div class="mx-2">
-            <h4 class="m-0">T</h4>
-            <%= @grandparent.thursday ? '✅' : '❌' %>
-          </div>
-          <div class="mx-2">
-            <h4 class="m-0">F</h4>
-            <%= @grandparent.friday ? '✅' : '❌' %>
-          </div>
-          <div class="mx-2">
-            <h4 class="m-0">S</h4>
-            <%= @grandparent.saturday ? '✅' : '❌' %>
-          </div>
-          <div class="mx-2">
-            <h4 class="m-0">S</h4>
-            <%= @grandparent.sunday ? '✅' : '❌' %>
-          </div>
-
-        </div>
-        <% unless policy(@grandparent).edit? %>
-          <%= link_to "Book", new_grandparent_booking_path(@grandparent), class: "btn btn-outline-success mb-3 button_1" %>
-          <% end %>
-        <div>
-          <% if policy(@grandparent).edit? %>
-            <%= link_to "Edit Profile", edit_grandparent_path(@grandparent), class: "btn btn-outline-primary button_2" %>
-          <% end %>
-          <% if policy(@grandparent).destroy? %>
-            <%= link_to "Delete Profile", grandparent_path(@grandparent), method: :delete, class: "btn-outline-danger button_3" %>
-          <% end %>
         </div>
       </div>
     </div>
