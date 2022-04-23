@@ -28,10 +28,10 @@ puts "---------------"
 puts "Creating grandparents..."
 
 grandparent = Grandparent.new(
-  name: Faker::Name.name,
+  name: 'Roger Billingsworth',
   location: "Richmond, Melbourne",
-  interest: Faker::Hobby.activity,
-  description: Faker::Quote.famous_last_words,
+  interest: 'Mobile games, Looking surprised, V-neck sweaters',
+  description: 'I would love to share some wisdom with the youth of today!',
   availability: Faker::Date.between(from: 2.days.ago, to: Date.today),
   image: "https://www.smithlifehomecare.com/wp-content/uploads/2020/08/Challenges-of-elderly-smaller.png",
   user_id: user.id,
@@ -47,10 +47,10 @@ grandparent.save!
 puts "Grandparent #{grandparent.id} created!"
 
 grandparent = Grandparent.new(
-  name: Faker::Name.name,
+  name: 'Yaya Stoyakovic',
   location: "Geelong, Victoria",
-  interest: Faker::Hobby.activity,
-  description: Faker::Quote.famous_last_words,
+  interest: 'Baking, Drinking cups of tea, Going for walks',
+  description: 'Getting out of the house more would be amazing!',
   availability: Faker::Date.between(from: 2.days.ago, to: Date.today),
   image: "https://d18mqtxkrsjgmh.cloudfront.net/public/styles/header_image/public/2019-04/elderly%20pic.jpg?itok=mJMUfNv2",
   user_id: user.id,
@@ -66,10 +66,10 @@ grandparent.save!
 puts "Grandparent #{grandparent.id} created!"
 
 grandparent = Grandparent.new(
-  name: Faker::Name.name,
+  name: 'Les Wagon',
   location: "Frankston, Victoria",
-  interest: Faker::Hobby.activity,
-  description: Faker::Quote.famous_last_words,
+  interest: 'Counter meals at the pub, Bird watching.',
+  description: 'My grandson told me to join this website.',
   availability: Faker::Date.between(from: 2.days.ago, to: Date.today),
   image: "https://homecareassistancemontgomery.com/wp-content/uploads/2018/08/Happy-Senior-Man.jpeg",
   user_id: user.id,
@@ -85,10 +85,10 @@ grandparent.save!
 puts "Grandparent #{grandparent.id} created!"
 
 grandparent = Grandparent.new(
-  name: Faker::Name.name,
+  name: 'Doris Pendleton',
   location: "Docklands, Melbourne",
-  interest: Faker::Hobby.activity,
-  description: Faker::Quote.famous_last_words,
+  interest: 'Reading novels, Buying jewellry, Spoiling my grandkids.',
+  description: "My husband told me I'm out of touch with the youth of today.",
   availability: Faker::Date.between(from: 2.days.ago, to: Date.today),
   image: "https://companionsforseniors.com/wp-content/uploads/2020/12/2020-12-28-Making-Reading-Easier-for-the-Elderly.jpg",
   user_id: user.id,
@@ -104,10 +104,10 @@ grandparent.save!
 puts "Grandparent #{grandparent.id} created!"
 
 grandparent = Grandparent.new(
-  name: Faker::Name.name,
+  name: 'Mika Kibonashi',
   location: "Sorrento, Victoria",
-  interest: Faker::Hobby.activity,
-  description: Faker::Quote.famous_last_words,
+  interest: 'Gardening, Riding bicycles, Chess.',
+  description: "I'm getting old and lonely at home by myself so I'm looking for activities to brighten my day.",
   availability: Faker::Date.between(from: 2.days.ago, to: Date.today),
   image: "https://www.silvereco.org/en/wp-content/uploads/2017/10/Japan-China-Elderly-people-Ageing-population-2.jpg",
   user_id: user.id,
@@ -123,10 +123,10 @@ grandparent.save!
 puts "Grandparent #{grandparent.id} created!"
 
 grandparent = Grandparent.new(
-  name: Faker::Name.name,
+  name: 'Dorothy Barrington-Smith',
   location: "Bulleen, Melbourne",
-  interest: Faker::Hobby.activity,
-  description: Faker::Quote.famous_last_words,
+  interest: 'Spending money, Collecting walking sticks, Stamp Enthusiast.',
+  description: 'Looking for new friends and new experiences.',
   availability: Faker::Date.between(from: 2.days.ago, to: Date.today),
   image: "https://agedcaredecisions.com.au/wp-content/uploads/Aged-Care-Decisions-Blogs-Website-2.jpg.webp",
   user_id: user.id,
@@ -142,10 +142,10 @@ grandparent.save!
 puts "Grandparent #{grandparent.id} created!"
 
 grandparent = Grandparent.new(
-  name: Faker::Name.name,
+  name: 'Karen Rushtone',
   location: "Seddon, Melbourne",
-  interest: Faker::Hobby.activity,
-  description: Faker::Quote.famous_last_words,
+  interest: 'Knitting, Playing cards, Wearing Glasses',
+  description: 'Convince me this website was a good idea to join.',
   availability: Faker::Date.between(from: 2.days.ago, to: Date.today),
   image: "https://www.careworkshealthservices.com/wp-content/uploads/2017/01/170101_article2_addressing-older-adults-etiquette_iStock-154888506-1-768x512.jpg",
   user_id: user.id,
