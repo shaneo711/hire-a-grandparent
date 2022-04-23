@@ -1,7 +1,8 @@
 <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
   <div class="container-fluid">
-    <%= link_to root_path, class: "navbar-brand" do %>
-      <%= image_tag "grandmother.jpg" %>
+    <%= link_to root_path, class: "navbar-brand d-flex align-items-center" do %>
+      <%= image_tag "grandparent_cartoon.png" %>
+      <h2 class="mx-3">Hire-a-Grandparent</h2>
     <% end %>
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -14,20 +15,21 @@
           <li class="nav-item dropdown">
             <% if current_user.unchecked_notifications.count == 0 %>
               <li class="nav-item dropdown">
-                <%= image_tag "https://i.imgur.com/XwKfN1I.png", class: "avatar dropdown-toggle", id: "navbardropdowngp", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': true %>
+                <span class="align-text-bottom notification-text">Notifications</span><i class="fa-regular fa-bell avatar" id="navbardropdowngp" style="font-size: 36px; color: #D9D9D9;" data-bs-toggle="dropdown" aria-haspopup="true", aria-expanded="true"></i>
                 <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
                   <%= link_to "0 Notifications", notifications_path, class: "dropdown-item" %>
                 </div>
               </li>
             <% elsif current_user.unchecked_notifications.count == 1  %>
               <li class="nav-item dropdown">
-                <%= image_tag "https://i.imgur.com/zEBX1U4.png", class: "avatar dropdown-toggle", id: "navbardropdowngp", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': true %>
+                <span class="align-text-bottom notification-text">Notifications</span><i class="fa-solid fa-bell avatar" id="navbardropdowngp" style="font-size: 36px; color: #0E6EFD;" data-bs-toggle="dropdown" aria-haspopup="true", aria-expanded="true"></i>
                 <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
                   <%= link_to "#{current_user.unchecked_notifications.count} Notification", notifications_path, class: "dropdown-item" %>
                 </div>
               </li>
             <% else current_user.unchecked_notifications.count > 1  %>
               <li class="nav-item dropdown">
+                <span class="align-text-bottom notification-text">Notifications</span><i class="fa-solid fa-bell avatar" id="navbardropdowngp" style="font-size: 36px; color: #0E6EFD;" data-bs-toggle="dropdown" aria-haspopup="true", aria-expanded="true"></i>
                 <%= image_tag "https://i.imgur.com/zEBX1U4.png", class: "avatar dropdown-toggle", id: "navbardropdowngp", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': true %>
                 <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
                   <%= link_to "#{current_user.unchecked_notifications.count} Notifications", notifications_path, class: "dropdown-item" %>
@@ -36,10 +38,10 @@
             <% end %>
           </li>
           <li class="nav-item active">
-            <%= link_to "Grandparents", grandparents_path, class: "nav-link" %>
+            <%= link_to "Grandparents", grandparents_path, class: "btn btn-primary mx-1 rounded-pill" %>
           </li>
           <li class="nav-item">
-            <%= link_to "Dashboard", user_root_path, class: "nav-link" %>
+            <%= link_to "Dashboard", user_root_path, class: "btn btn-primary mx-1 rounded-pill" %>
           </li>
           <li class="nav-item dropdown">
             <%= image_tag "https://kitt.lewagon.com/placeholder/users/ssaunier", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': true %>
@@ -52,15 +54,15 @@
           </li>
         <% else %>
           <li class="nav-item" type="button">
-            <%= link_to "Become a Grandparent", new_grandparent_path, class: "nav-link" %>
+            <%= link_to "Become a Grandparent", new_grandparent_path, class: "btn btn-primary mx-1 rounded-pill" %>
           </li>
 
           <li class="nav-item" type="button">
-            <%= link_to "FAQ", "#", class: "nav-link" %>
+            <%= link_to "FAQ", "#", class: "btn btn-primary mx-1 rounded-pill" %>
           </li>
 
           <li class="nav-item" type="button">
-            <%= link_to "Log In", new_user_session_path, class: "nav-link" %>
+            <%= link_to "Log In", new_user_session_path, class: "btn btn-primary mx-1 rounded-pill" %>
           </li>
         <% end %>
       </ul>

@@ -9,7 +9,11 @@ Rails.application.routes.draw do
   resources :notifications, only: %i[index]
 
   resources :grandparents do
-    resources :bookings, only: %i[new create edit update index]
+    resources :bookings, only: %i[new create edit update index show]
+    resources :reviews, only: %i[new create index]
   end
+  
+
+  resources :bookings, only: %i[destroy]
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end

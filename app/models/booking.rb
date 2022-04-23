@@ -13,4 +13,5 @@ class Booking < ApplicationRecord
     notification.deliver(grandparent.user)
   end
 
+  validates :date, :title, :description, presence: true
  end

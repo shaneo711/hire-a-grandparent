@@ -20,22 +20,26 @@
 
 .nav-item .nav-link {
   justify-content: space-between;
-  color: #4A4A4A;
+  color: white;
   text-decoration: none;
   border: 1px solid #4A4A4A;
   padding: 8px 24px;
   border-radius: 50px;
   font-weight: normal;
   opacity: 0.6;
-  transition: opacity 0.3s ease;
+  // transition: opacity 0.3s ease;
   margin-left: 12px;
 }
 
 .nav-item :hover {
   opacity: 1;
-  color: lightgrey;
+  color: black;
 }
 
 .avatar {
   margin-left: 12px;
+}
+
+.notification-text :hover {
+  color: black !important;
 }

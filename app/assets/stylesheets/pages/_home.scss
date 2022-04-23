@@ -1,41 +1,30 @@
 // Specific CSS for your home-page
-body {
-  font-family: 'Work Sans',sans-serif;
-  background-image: url("https: //images.immediate.co.uk/production/volatile/sites/4/2021/08/mountains-7ddde89.jpg?quality=90&resize=768,574");
-}
+.home-page {
+  body {
+    font-family: "Work Sans", "Helvetica", "sans-serif";
+    // background-image: url("https://images.immediate.co.uk/production/volatile/sites/4/2021/08/mountains-7ddde89.jpg?quality=90&resize=768,574");
+  }
 
-.banner {
-  background-color: #ffcfd8;
-  height: 100vh;
-  color: #4971ef;
-}
-.container {
+  .banner {
+    text-align: center;
+    background-color: #ffcfd8;
+    height: 100vh;
+    color: #4971ef;
+  }
 
-}
+  img {
+    width: 100%;
+    object-fit: cover;
+  }
 
-img {
-  width: 100%;
-  object-fit: cover;
-}
+  h1 {
+    font-family: "Nunito", "Helvetica", "sans-serif";
+    width: fit-content;
+    padding: 24px 0 24px 0;
+  }
 
-h1 {
-  font-family: 'Carter One', cursive;
-  width: fit-content;
-  padding: 24px 0 24px 0;
-}
-
-h4 {
-  padding: 8px 0 16px 0;
-  font-family: 'Boogaloo', cursive;
-}
-
-.col-sm-6 {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-p {
-  font-family: 'Boogaloo', cursive;
-  font-size: smaller;
+  h4 {
+    padding: 8px 0 16px 0;
+    font-family: "Nunito", "Helvetica", "sans-serif";
+  }
 }
