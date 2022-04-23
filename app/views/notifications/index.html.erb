@@ -1,14 +1,14 @@
-<div class="container" style="border: 2px solid red; height: 70vh; margin-top: 24px;">
+<div class="container" style="height: 70vh; margin-top: 24px;">
   <% if current_user.unchecked_notifications.count == 0 %>
     <h1>No New Notifications</h1>
     <%= link_to "View Dashboard", user_root_path, class:"btn btn-outline-primary p-100" %>
     <%= link_to "Search Grandparents", grandparents_path, class:"btn btn-outline-primary p-100" %>
   <% else current_user.unchecked_notifications.count > 0  %>
     <% @notifications.each do |notification| %>
-      <div class="card-product" style="border-radius: 15px;>
+      <div class="card-product" style="border-radius: 15px;">
       <% grandparent = notification.params[:booking].grandparent %>
       <% booking = notification.params[:booking] %>
-        <img src=<%= notification.params[:booking].grandparent.image %> style="object-fit: cover;" />
+        <img src=<%= notification.params[:booking].grandparent.image %> style="object-fit: cover;">
         <div class="card-product-infos pt-22">
             <h2>New Booking: "<%= booking.title %>" with <%= grandparent.name %></h2>
             <p><%= booking.description %></p>
