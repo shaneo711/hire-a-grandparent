@@ -1,3 +1,23 @@
-<% @notifications.each do |notification| %>
-  <p>You've received a new booking</p>
-<% end %>
+<div class="container" style="border: 2px solid red; height: 70vh; margin-top: 24px;">
+  <% if current_user.unchecked_notifications.count == 0 %>
+    <h1>No New Notifications</h1>
+    <%= link_to "View Dashboard", user_root_path, class:"btn btn-outline-primary p-100" %>
+    <%= link_to "Search Grandparents", grandparents_path, class:"btn btn-outline-primary p-100" %>
+  <% else current_user.unchecked_notifications.count > 0  %>
+    <% @notifications.each do |notification| %>
+      <div class="card-product" style="border-radius: 15px;>
+      <% grandparent = notification.params[:booking].grandparent %>
+      <% booking = notification.params[:booking] %>
+        <img src=<%= notification.params[:booking].grandparent.image %> style="object-fit: cover;" />
+        <div class="card-product-infos pt-22">
+            <h2>New Booking: "<%= booking.title %>" with <%= grandparent.name %></h2>
+            <p><%= booking.description %></p>
+            <p><%= booking.date.to_s[0..-8] %></p>
+            <%= link_to "View Booking", user_root_path, class:"btn btn-outline-primary p-100 d-flex justify-content flex-end" %>
+        </div>
+      </div>
+    <% end %>
+  <% end %>
+</div>
+
+          <p><strong>Booking Date: </strong><%= booking.date.to_s[0..-8]%></p> <br>
