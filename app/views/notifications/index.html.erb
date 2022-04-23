@@ -1,39 +1,21 @@
-<div class="container" style="border: 2px solid red; height: 70vh;">
-  <h1>Notifications</h1>
-  <div class="card-product">
-    <img src="https://www.verywellfamily.com/thmb/QtdOgFpwz5FJLNDa6ISHWFFUQ6s=/1887x1415/smart/filters:no_upscale()/148194850-56afae933df78cf772c7675b.jpg" style="width: 250px; height: 150px; object-fit: cover;" />
-    <div class="card-product-infos">
-      <h2>New Booking With #{grandparent.name}: #{booking.name}</h2>
-    <p>#{booking.description}</p>
-      <%= link_to "View Booking", user_root_path, class:"btn btn-outline-primary p-100" %>
-    </div>
-  </div>
-  <div class="card-product">
-  <img src="https://www.verywellfamily.com/thmb/QtdOgFpwz5FJLNDa6ISHWFFUQ6s=/1887x1415/smart/filters:no_upscale()/148194850-56afae933df78cf772c7675b.jpg" style="width: 250px; height: 150px; object-fit: cover;" />
-  <div class="card-product-infos">
-    <h2>New Booking With #{grandparent.name}: #{booking.name}</h2>
-    <p>#{booking.description}</p>
-    <%= link_to "View Booking", user_root_path, class:"btn btn-outline-primary p-100" %>
-  </div>
-</div>
-</div>
-
-<!--
-<% if current_user.unchecked_notifications.count == 0 %>
-  <h1>No New Notifications</h1>
-  <%= link_to "View Dashboard", user_root_path, class:"btn btn-outline-primary p-100" %>
-  <%= link_to "Search Grandparents", grandparents_path, class:"btn btn-outline-primary p-100" %>
-<% else current_user.unchecked_notifications.count > 0  %>
-  <% @notifications.each do |notification| %>
-    <div class="card-product">
-      <img src=<%= grandparent.image %> style="width: 250px; height: 150px; object-fit: cover;" />
-      <div class="card-product-infos">
-          <h2>New Booking: "<%= booking.title %>" with <%= grandparent.name %></h2>
-          <p><%= booking.description %></p>
-          <p><%= booking.datetime %></p>
-          <%= link_to "View Booking", user_root_path, class:"btn btn-outline-primary p-100" %>
+<div class="container" style="border: 2px solid red; height: 70vh; margin-top: 24px;">
+  <% if current_user.unchecked_notifications.count == 0 %>
+    <h1>No New Notifications</h1>
+    <%= link_to "View Dashboard", user_root_path, class:"btn btn-outline-primary p-100" %>
+    <%= link_to "Search Grandparents", grandparents_path, class:"btn btn-outline-primary p-100" %>
+  <% else current_user.unchecked_notifications.count > 0  %>
+    <% @notifications.each do |notification| %>
+      <div class="card-product">
+      <% grandparent = notification.params[:booking].grandparent %>
+      <% booking = notification.params[:booking] %>
+        <img src=<%= notification.params[:booking].grandparent.image %> style="width: 250px; height: 150px; object-fit: cover;" />
+        <div class="card-product-infos">
+            <h2>New Booking: "<%= booking.title %>" with <%= grandparent.name %></h2>
+            <p><%= booking.description %></p>
+            <p><%= booking.date %></p>
+            <%= link_to "View Booking", user_root_path, class:"btn btn-outline-primary p-100" %>
+        </div>
       </div>
-    </div>
+    <% end %>
   <% end %>
-<% end %>
--->
+</div>
